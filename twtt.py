@@ -11,7 +11,10 @@ class TweetTokenizer:
     LOG_FILE = "./parser.log"
     HTML_TAGS = '<[^>]+>'
     TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
-    END_SENTENCE_REGEX = '[^?!\.]+([?!]+|\.+)$'
+    END_SENTENCE_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
+    PUNCTUATION_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
+    POSSESSIVE_REGEX = '^([^\']+)(\'[sS]?)$'
+    CLITICS_REGEX = '([^\']+)(n\'t)'
     DEBUG_LIMIT = 100
 
 
@@ -46,7 +49,7 @@ class TweetTokenizer:
             for line in f:
                 value, key = line.split(TweetTokenizer.ASCII_DELIM)
                 self.ascii_table[key.strip()] = value.strip()
-        self.logger.info("Table: " + str(self.ascii_table))
+        #self.logger.info("Table: " + str(self.ascii_table))
 
     def get_tweet(self):
         """ Get tweets based on GID
@@ -116,7 +119,66 @@ class TweetTokenizer:
 
             # 5,6- Break tweet into multiple lines
             texts = self.build_linebreak(text)
-            self.logger.debug("step5: " + "\n".join(texts))
+            self.logger.debug("step5,6: " + str(texts))
+
+            # 7- separate punctuation and clitics
+            texts = self.break_punctuations(texts)
+
+    def proc_token(self, token):
+        if isinstance(token, list):
+            # ignore lists
+            return []
+
+        #END_SENTENCE_REGEX = '^[^?!\.]+([?!]+|\.+)$'
+        #PUNCTUATION_REGEX = '^(^?!\.)+([?!]+|\.+)$'
+        #POSSESSIVE_REGEX = '^([^\']+)(\'S?)$'
+
+        # test cases:
+        # go!
+        # go??!
+        # shouldn't
+        # ryan's
+        # jim's!
+        # dogs'
+        pun_matcher = re.compile(TweetTokenizer.PUNCTUATION_REGEX)
+        cli_matcher = re.compile(TweetTokenizer.CLITICS_REGEX)
+        pos_matcher = re.compile(TweetTokenizer.POSSESSIVE_REGEX)
+
+        # break up punctuations
+        pun_match = pun_matcher.match(token)
+        tokens = [token]
+        
+        if pun_match:
+            tokens = list(pun_match.groups())
+        
+        # break clitics and/or possessive
+        cli_match = cli_matcher.match(tokens[0])
+        pos_match = pos_matcher.match(tokens[0])
+
+        if cli_match and pos_match:
+            self.logger.error(
+                    "Matched both clitics and possessive on '{s}'".format(s=tokens[0])
+            )
+        if cli_match:
+            tokens = list(cli_match.groups()) + tokens[1:]
+            self.logger.info("Matched clitic at '{c}'".format(c=tokens[0]))
+        elif pos_match:
+            self.logger.info("Matched possessive at '{c}'".format(c=tokens[0]))
+            tokens = list(pos_match.groups()) + tokens[1:]
+        
+        self.logger.debug("{tok} ==> {stok}".format(tok=token, stok=str(tokens)))
+        return tokens 
+
+    
+    def break_punctuations(self, texts):
+        texts = map(
+            lambda sentence: reduce(
+                lambda x,y: self.proc_token(x) + self.proc_token(y),
+                sentence,
+            ),
+            texts,
+        )
+        return texts
 
     def load_abbrv_table(self): 
         self.logger.info("Loading abbrv table")
@@ -132,7 +194,7 @@ class TweetTokenizer:
                 self.abbrv_table[line] = sha
                 self.rabbrv_table[sha] = line
 
-        self.logger.debug("Table: " + str(self.abbrv_table))
+        #self.logger.debug("Table: " + str(self.abbrv_table))
 
     def abbrv_ends_sentence(self, tokens, index):
         index += 1
@@ -190,7 +252,7 @@ class TweetTokenizer:
                         .format(token=tok, match=match.group(0))
                 )
                 level += 1
-        return map(lambda sentence: " ".join(sentence), texts)
+        return texts
     
 if __name__ == "__main__":
     twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test")
