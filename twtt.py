@@ -221,7 +221,7 @@ class TweetTokenizer:
         with constraints and rules specified in handout
         """
         # tokenize
-        tokens = text.split(" ")
+        tokens = text.split()
 
         # replace all abbrv. with its sha, unless we 
         # have reasons to believe that this abbrv ends
