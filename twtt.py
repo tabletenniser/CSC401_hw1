@@ -130,12 +130,15 @@ class TweetTokenizer:
             # 7- separate punctuation and clitics
             texts = self.break_punctuations(texts)
             self.logger.debug("step7: " + str(texts))
-            print str(texts)
 
     def proc_token(self, token):
         if isinstance(token, list):
-            # ignore lists
-            return token
+            # nope
+            self.logger.error(
+                    "Got list in proc_token, string expected! '{tok}'"
+                    .format(tok=token)
+            )
+            raise ValueError("Got list when string is expected")
 
         #END_SENTENCE_REGEX = '^[^?!\.]+([?!]+|\.+)$'
         #PUNCTUATION_REGEX = '^(^?!\.)+([?!]+|\.+)$'
