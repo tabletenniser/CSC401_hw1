@@ -35,6 +35,9 @@ class TweetTokenizer:
         )
         self.logger = logging.getLogger(self.__class__.__name__)
 
+        # output to log
+        self.logger.info("++++++++ What a good day to tweet! ++++++++")
+
         # load some tables
         self.load_ascii_table()
         self.load_abbrv_table()
@@ -94,6 +97,9 @@ class TweetTokenizer:
 
             self.logger.debug("step0: " + text)
 
+            # 0- Remove all tailing and leading spaces
+            text = text.strip()
+
             # 1- Remove all HTML tags
             text = re.sub(TweetTokenizer.HTML_TAGS, "", text)
             self.logger.debug("step1: " + text)
@@ -123,11 +129,13 @@ class TweetTokenizer:
 
             # 7- separate punctuation and clitics
             texts = self.break_punctuations(texts)
+            self.logger.debug("step7: " + str(texts))
+            print str(texts)
 
     def proc_token(self, token):
         if isinstance(token, list):
             # ignore lists
-            return []
+            return token
 
         #END_SENTENCE_REGEX = '^[^?!\.]+([?!]+|\.+)$'
         #PUNCTUATION_REGEX = '^(^?!\.)+([?!]+|\.+)$'
@@ -167,18 +175,15 @@ class TweetTokenizer:
             tokens = list(pos_match.groups()) + tokens[1:]
         
         self.logger.debug("{tok} ==> {stok}".format(tok=token, stok=str(tokens)))
-        return tokens 
-
+        return tokens
     
     def break_punctuations(self, texts):
-        texts = map(
-            lambda sentence: reduce(
-                lambda x,y: self.proc_token(x) + self.proc_token(y),
-                sentence,
-            ),
-            texts,
-        )
-        return texts
+        result = [[] for _ in xrange(len(texts))]
+        for level in xrange(len(texts)):
+            for token in texts[level]:
+                tokens = self.proc_token(token)
+                result[level].extend(tokens)
+        return result
 
     def load_abbrv_table(self): 
         self.logger.info("Loading abbrv table")
@@ -222,12 +227,14 @@ class TweetTokenizer:
             if tokens[token_idx] in self.abbrv_table:
                 # If the token follows immediately by an upper case
                 # we consider this abbrv ends a sentence
+                self.logger.info("Abbr detected at " + tokens[token_idx])
+
                 if not self.abbrv_ends_sentence(tokens, token_idx):
                     # replace abbrv. with sha
                     tokens[token_idx] = self.abbrv_table[tokens[token_idx]]
                 else:
                     self.logger.debug(
-                            "End of sentence detected near '{tok}' in {s}"
+                            "End of sentence detected near abbr '{tok}' in {s}"
                             .format(tok=tokens[token_idx], s="".join(tokens))
                     )
 
@@ -246,10 +253,10 @@ class TweetTokenizer:
             else:
                 texts[level].append(tok)
             if match is not None:
-                # end of line
+                # end of line ... possibly!
                 self.logger.debug(
                         "End of sentence detected at '{token}', due to '{match}'"
-                        .format(token=tok, match=match.group(0))
+                        .format(token=tok, match=match.group(2))
                 )
                 level += 1
         return texts
