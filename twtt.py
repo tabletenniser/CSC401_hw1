@@ -322,5 +322,5 @@ class TweetTokenizer:
         return texts
     
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test.out")
+    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test.twt")
     twt.parse_tweet()
