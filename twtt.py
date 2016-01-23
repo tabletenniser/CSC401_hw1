@@ -3,6 +3,12 @@ import re
 import hashlib
 import NLPlib
 
+"""
+TODO:
+    1- What to do with brackets?
+    2- Other corner cases, check output for examples
+"""
+
 
 class TweetTokenizer:
     GID = 0
