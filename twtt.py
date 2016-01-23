@@ -1,6 +1,7 @@
 import logging
 import re
 import hashlib
+import NLPlib
 
 
 class TweetTokenizer:
@@ -13,7 +14,8 @@ class TweetTokenizer:
     TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
     END_SENTENCE_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
     PUNCTUATION_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
-    POSSESSIVE_REGEX = '^([^\']+)(\'[sS]?)$'
+    PUNCTUATION_REGEX_2 = '^([^,;/]+)([,;/])([^,;/]+)?$'
+    POSSESSIVE_REGEX = '^([^\']+)(\'[smS]?)$'
     CLITICS_REGEX = '([^\']+)(n\'t)'
     DEBUG_LIMIT = 100
 
@@ -131,6 +133,21 @@ class TweetTokenizer:
             texts = self.break_punctuations(texts)
             self.logger.debug("step7: " + str(texts))
 
+            # 8- Tag PoS info
+            texts = self.tag_PoS(texts)
+            self.logger.debug("step8: " + str(texts))
+
+    
+    def tag_PoS(self, texts):
+        tagger = NLPlib.NLPlib()
+        processed_texts = []
+        for sentence in texts:
+            tags = tagger.tag(sentence)
+            processed_texts.append(
+                    [ x + '/' + y for x, y in zip(sentence, tags)]
+            )
+        return processed_texts 
+
     def proc_token(self, token):
         if isinstance(token, list):
             # nope
@@ -178,6 +195,20 @@ class TweetTokenizer:
             tokens = list(pos_match.groups()) + tokens[1:]
         
         self.logger.debug("{tok} ==> {stok}".format(tok=token, stok=str(tokens)))
+
+        # break by other punctuations
+        # comma, semicolon, forward and backward slashes
+        original_tokens = tokens
+        tokens = []
+
+        pun_matcher2 = re.compile(TweetTokenizer.PUNCTUATION_REGEX_2)
+        for token in original_tokens:
+           pmatch = pun_matcher2.match(token)
+           if pmatch:
+               tokens += filter(lambda x: x is not None, pmatch.groups())
+           else:
+               tokens.append(token)
+            
         return tokens
     
     def break_punctuations(self, texts):
