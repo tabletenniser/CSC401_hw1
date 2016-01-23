@@ -34,6 +34,7 @@ class TweetTokenizer:
         self.ascii_table = None
         self.abbrv_table = None
         self.rabbrv_table = None
+        self.tagger = None
 
         # set up logging
         logging.basicConfig(
@@ -134,7 +135,7 @@ class TweetTokenizer:
                 text = " ".join(
                         filter(
                             lambda k: not k.lower().startswith("http") and not k.lower().startswith("www"),
-                            text.split(" "),
+                            text.split(),
                         )
                 )
                 self.logger.debug("step3: " + text)
@@ -165,10 +166,11 @@ class TweetTokenizer:
         map(lambda sentence: self.output_file_write(" ".join(sentence)), texts)
     
     def tag_PoS(self, texts):
-        tagger = NLPlib.NLPlib()
+        if self.tagger is None:
+            self.tagger = NLPlib.NLPlib()
         processed_texts = []
         for sentence in texts:
-            tags = tagger.tag(sentence)
+            tags = self.tagger.tag(sentence)
             processed_texts.append(
                     [ x + '/' + y for x, y in zip(sentence, tags)]
             )
