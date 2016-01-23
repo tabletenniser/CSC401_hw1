@@ -23,7 +23,8 @@ class TweetTokenizer:
     def __init__(self, input_file, group_name, output_file):
         self.input_file = input_file
         self.group_name = group_name
-        self.output_file = output_file
+        self.output_file_name = output_file
+        self.output_file = None
         self.ascii_table = None
         self.abbrv_table = None
         self.rabbrv_table = None
@@ -43,6 +44,11 @@ class TweetTokenizer:
         # load some tables
         self.load_ascii_table()
         self.load_abbrv_table()
+
+    def output_file_write(self, line):
+        if self.output_file is None:
+            raise ValueError("Output file is not yet opened!")
+        self.output_file.write(line + "\n")
 
     def load_ascii_table(self):
         """ Load ASCII table from file TweetTokenizer.ASCII_TABLE
@@ -81,62 +87,76 @@ class TweetTokenizer:
         """ Parse tweets based on rules specified in the handout
         """
         tweet_count = 0
-        for tweet in self.get_tweet():
-            if TweetTokenizer.DEBUG_LIMIT and tweet_count > TweetTokenizer.DEBUG_LIMIT:
-                return
-            tweet_count += 1
-            tweet_match = re.match(TweetTokenizer.TWEET_REGEX, tweet)
-            try:
-                tclass, tid, date, query, user, text = tweet_match.groups()
-                self.logger.debug(
-                        ("Parsed tclass: '{t}' tid: '{tid}' date: '{d}'"
-                        "query: '{q}' user: '{u}' text: '{txt}'")
-                        .format(t=tclass, tid=tid, d=date, q=query, u=user, txt=text)
-                )
-            except Exception as e:
-                self.logger.error("Unable to parse tweet " + tweet)
-                continue
 
-            self.logger.debug("step0: " + text)
-
-            # 0- Remove all tailing and leading spaces
-            text = text.strip()
-
-            # 1- Remove all HTML tags
-            text = re.sub(TweetTokenizer.HTML_TAGS, "", text)
-            self.logger.debug("step1: " + text)
-
-            # 2- HTML char codes replaced with ASCII (screw regex, just brute force it)
-            for key in self.ascii_table:
-                text = text.replace(key, self.ascii_table[key])
-            self.logger.debug("step2: " + text)
-            
-            # 3- filter out all HTTP/WWW tags
-            text = " ".join(
-                    filter(
-                        lambda k: not k.lower().startswith("http") and not k.lower().startswith("www"),
-                        text.split(" "),
+        # open output file
+        with open(self.output_file_name, "w") as self.output_file:
+            for tweet in self.get_tweet():
+                if TweetTokenizer.DEBUG_LIMIT and tweet_count > TweetTokenizer.DEBUG_LIMIT:
+                    return
+                tweet_count += 1
+                tweet_match = re.match(TweetTokenizer.TWEET_REGEX, tweet)
+                try:
+                    tclass, tid, date, query, user, text = tweet_match.groups()
+                    self.logger.debug(
+                            ("Parsed tclass: '{t}' tid: '{tid}' date: '{d}'"
+                            "query: '{q}' user: '{u}' text: '{txt}'")
+                            .format(t=tclass, tid=tid, d=date, q=query, u=user, txt=text)
                     )
-            )
-            self.logger.debug("step3: " + text)
+                except Exception as e:
+                    self.logger.error("Unable to parse tweet " + tweet)
+                    continue
 
-            # 4- filter out @ and #
-            text = text.replace("@", "")
-            text = text.replace("#", "")
-            self.logger.debug("step4: " + text)
+                if tclass not in "01234":
+                    self.logger.error("Tweet has incorrect tag " + tclass)
+                    continue
 
-            # 5,6- Break tweet into multiple lines
-            texts = self.build_linebreak(text)
-            self.logger.debug("step5,6: " + str(texts))
+                self.logger.debug("step0: " + text)
 
-            # 7- separate punctuation and clitics
-            texts = self.break_punctuations(texts)
-            self.logger.debug("step7: " + str(texts))
+                # 0- Remove all tailing and leading spaces
+                text = text.strip()
 
-            # 8- Tag PoS info
-            texts = self.tag_PoS(texts)
-            self.logger.debug("step8: " + str(texts))
+                # 1- Remove all HTML tags
+                text = re.sub(TweetTokenizer.HTML_TAGS, "", text)
+                self.logger.debug("step1: " + text)
 
+                # 2- HTML char codes replaced with ASCII (screw regex, just brute force it)
+                for key in self.ascii_table:
+                    text = text.replace(key, self.ascii_table[key])
+                self.logger.debug("step2: " + text)
+                
+                # 3- filter out all HTTP/WWW tags
+                text = " ".join(
+                        filter(
+                            lambda k: not k.lower().startswith("http") and not k.lower().startswith("www"),
+                            text.split(" "),
+                        )
+                )
+                self.logger.debug("step3: " + text)
+
+                # 4- filter out @ and #
+                text = text.replace("@", "")
+                text = text.replace("#", "")
+                self.logger.debug("step4: " + text)
+
+                # 5,6- Break tweet into multiple lines
+                texts = self.build_linebreak(text)
+                self.logger.debug("step5,6: " + str(texts))
+
+                # 7- separate punctuation and clitics
+                texts = self.break_punctuations(texts)
+                self.logger.debug("step7: " + str(texts))
+
+                # 8- Tag PoS info
+                texts = self.tag_PoS(texts)
+                self.logger.debug("step8: " + str(texts))
+
+                # 9- demarcation
+                self.assemble(texts, tclass)
+        self.logger.info("-------- What a good day to tweet! --------")
+
+    def assemble(self, texts, tclass):
+        self.output_file_write("<A={cls}>".format(cls=tclass))
+        map(lambda sentence: self.output_file_write(" ".join(sentence)), texts)
     
     def tag_PoS(self, texts):
         tagger = NLPlib.NLPlib()
@@ -296,5 +316,5 @@ class TweetTokenizer:
         return texts
     
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test")
+    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test.out")
     twt.parse_tweet()
