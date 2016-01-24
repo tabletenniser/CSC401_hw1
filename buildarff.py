@@ -137,12 +137,12 @@ class Statistics:
         stats = ",".join([str(self.stats[k]) for k in order])
         try:
             avg_sentence_len = 1.0 * self.stats["n_tokens"] / (1.0 * self.stats["n_sentence"])
-        except ValueError:
+        except ZeroDivisionError:
             avg_sentence_len = 0
 
         try:
             avg_token_len = 1.0 * self.stats["n_chars"] / (1.0 * self.stats["n_tokens_excluding_punc"])
-        except ValueError:
+        except ZeroDivisionError:
             avg_token_len = 0
         stats += "," + str(avg_token_len)
         stats += "," + str(self.tclass)
