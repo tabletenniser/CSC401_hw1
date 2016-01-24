@@ -20,7 +20,7 @@ class TweetTokenizer:
     TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
     END_SENTENCE_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
     PUNCTUATION_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
-    PUNCTUATION_REGEX_2 = '^([^,;/]+)([,;/])([^,;/]+)?$'
+    PUNCTUATION_REGEX_2 = '^([\(\),.;:])?([^\(\),.;:]+)([\(\),.;:])?'
     POSSESSIVE_REGEX = '^([^\']+)(\'[smS]?)$'
     CLITICS_REGEX = '([^\']+)(n\'t)'
     DEBUG_LIMIT = 100

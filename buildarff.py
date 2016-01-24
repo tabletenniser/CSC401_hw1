@@ -1,6 +1,11 @@
 import re
 import logging
 
+"""
+TODO: The doc is too fucking vague, how do i count punctuations?
+      Punctuation as a token or within a token?
+"""
+
 class Arff:
     TAG_REGEX = "^<A=(\d)>$"
     LOG_FILE = "buildarff.log"
@@ -223,6 +228,13 @@ class Statistics:
         # modern slang
         elif word.lower() in self.list_modern_slang:
             self.stats["modern_slang_acroynms"] += 1
+        
+        # punctuation stats:
+        self.stats["commas"] += word.count(",")
+        self.stats["colons_and_semicolons"] += word.count(";") + word.count(":")
+        self.stats["dashes"] += word.count("-")
+        self.stats["parentheses"] += word.count(")") + word.count(")")
+        self.stats["ellipses"] += word.count("...")
 
         # a mini FSM to recognize going+to+VB
         if word.lower() == "going" and self.going_to_VB == 0:
