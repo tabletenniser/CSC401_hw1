@@ -7,6 +7,7 @@ import NLPlib
 TODO:
     1- What to do with brackets?
     2- Other corner cases, check output for examples
+    3- ASCII tags remains cold, need to do lah
 """
 
 
@@ -20,7 +21,7 @@ class TweetTokenizer:
     TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
     END_SENTENCE_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
     PUNCTUATION_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
-    PUNCTUATION_REGEX_2 = '^([\(\),.;:])?([^\(\),.;:]+)([\(\),.;:])?'
+    PUNCTUATION_REGEX_2 = '^([\(\),.;:])?([^\(\),.;:]+)([\(\),.;:])?$'
     POSSESSIVE_REGEX = '^([^\']+)(\'[smS]?)$'
     CLITICS_REGEX = '([^\']+)(n\'t)'
     DEBUG_LIMIT = 100
