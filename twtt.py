@@ -185,10 +185,6 @@ class TweetTokenizer:
             )
             raise ValueError("Got list when string is expected")
 
-        #END_SENTENCE_REGEX = '^[^?!\.]+([?!]+|\.+)$'
-        #PUNCTUATION_REGEX = '^(^?!\.)+([?!]+|\.+)$'
-        #POSSESSIVE_REGEX = '^([^\']+)(\'S?)$'
-
         # test cases:
         # go!
         # go??!
