@@ -1,0 +1,21 @@
+Dear c4wangze and c5kangyi,
+
+This is an automatically generated email. Your group information for CSC401/2511 follows.
+
+Group ID = 55            Use this as directed in the handout to select your data
+IBM BlueMix Promo Code = CE29BB64-7E1D-7C2C-9C92-0082507B104C
+
+ONLY ONE GROUP MEMBER CAN USE THE PROMO CODE WITH THEIR ACCOUNT. Determine amongst yourselves whom that should be. Once associated with an IBM account, the promo code will remain (irrevocably) in effect until June 2016.
+
+To use the code, follow the instructions in our tutorial at http://www.cs.toronto.edu/~frank/csc401/tutorials/csc401_A1_tut2.pdf, specifically from Slide 14 onwards.
+
+
+
+
+
+Please let me know of any questions or corrections.
+
+
+
+Most enthusiatic contrafibularities,
+Robot Frank
