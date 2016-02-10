@@ -149,7 +149,10 @@ class Statistics:
             avg_token_len = 1.0 * self.stats["n_chars"] / (1.0 * self.stats["n_tokens_excluding_punc"])
         except ZeroDivisionError:
             avg_token_len = 0
+
+        stats += "," + str(avg_sentence_len)
         stats += "," + str(avg_token_len)
+        stats += "," + str(self.stats["n_sentence"])
         stats += "," + str(self.tclass)
         return stats
 
