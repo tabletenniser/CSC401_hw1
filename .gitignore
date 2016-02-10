@@ -64,8 +64,6 @@ target/
 #data
 training.1600000.processed.noemoticon.csv
 testdata.manualSUBSET.2009.06.14.csv
-*.twt
-*.arff
 
 #windows tmp
 *~
