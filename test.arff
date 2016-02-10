@@ -3,6 +3,7 @@
 % 2. Sources:
 %      (a) Creator: Y. Kang and Z. Wang
 %      (c) Date: Feb, 2016
+@RELATION NLP_project
 
 @ATTRIBUTE first_person_pronouns  NUMERIC
 @ATTRIBUTE second_person_pronouns  NUMERIC
@@ -24,7 +25,7 @@
 @ATTRIBUTE avg_sentence_len NUMERIC
 @ATTRIBUTE avg_token_len NUMERIC
 @ATTRIBUTE n_sentences NUMERIC
-@ATTRIBUTE tclass NUMERIC
+@ATTRIBUTE tclass {0, 4}
 
 @DATA 
 2,0,1,0,0,0,1,0,0,0,0,5,1,1,0,0,1,11.5,4.4,2,4

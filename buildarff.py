@@ -160,6 +160,7 @@ class Statistics:
             "% 2. Sources:\n" \
             "%      (a) Creator: Y. Kang and Z. Wang\n" \
             "%      (c) Date: Feb, 2016\n" \
+            "@RELATION NLP_project\n" \
             "\n" \
             "@ATTRIBUTE first_person_pronouns  NUMERIC\n" \
             "@ATTRIBUTE second_person_pronouns  NUMERIC\n" \
@@ -181,7 +182,7 @@ class Statistics:
             "@ATTRIBUTE avg_sentence_len NUMERIC\n" \
             "@ATTRIBUTE avg_token_len NUMERIC\n" \
             "@ATTRIBUTE n_sentences NUMERIC\n" \
-            "@ATTRIBUTE tclass NUMERIC\n" \
+            "@ATTRIBUTE tclass {0, 4}\n" \
             "\n" \
             "@DATA \n"
         return header 
