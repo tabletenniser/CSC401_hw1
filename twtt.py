@@ -24,10 +24,11 @@ class TweetTokenizer:
     PUNCTUATION_REGEX_2 = '^([\(\),.;:])?([^\(\),.;:]+)([\(\),.;:])?$'
     POSSESSIVE_REGEX = '^([^\']+)(\'[smS]?)$'
     CLITICS_REGEX = '([^\']+)(n\'t)'
-    DEBUG_LIMIT = 100
+    DEBUG_LIMIT = 0
 
 
-    def __init__(self, input_file, group_name, output_file):
+    def __init__(self, input_file, group_name, output_file, parse_all=False):
+        self.parse_all = parse_all
         self.input_file = input_file
         self.group_name = group_name
         self.output_file_name = output_file
@@ -88,7 +89,8 @@ class TweetTokenizer:
             for line in f:
                 line_count += 1
                 if ((line_count >= class_0_lb and line_count <= class_0_ub) or
-                    (line_count >= class_4_lb and line_count <= class_4_ub)):
+                    (line_count >= class_4_lb and line_count <= class_4_ub) or 
+                    self.parse_all):
                     yield line
 
     def parse_tweet(self):
@@ -321,5 +323,8 @@ class TweetTokenizer:
         return texts
     
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "test.twt")
+    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "train.twt", parse_all=False)
+    twt.parse_tweet()
+
+    twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", "Group", "test.twt", parse_all=True)
     twt.parse_tweet()

@@ -43,31 +43,29 @@ class Arff:
 
 class Statistics:
     """
-    Counts:
-        | First person pronouns
-        | Second person pronouns
-        | Third person pronouns
-        | Coordinating conjunctions
-        | Past-tense verbs
-        | Future-tense verbs
-        | Commas
-        | Colons and semi-colons
-        | Dashes
-        | Parentheses
-        | Ellipses
-        | Common nouns
-        | Proper nouns
-        | Adverbs
-        | wh-words
-        | Modern slang acroynms
-        | Words all in upper case (at least 2 letters long)
-
-     Average length of sentences (in tokens)
-    "Average length of tokens, excluding punctuation tokens (in characters)
-    "Number of sentences"
+    Generates statistics of tweets
     """
-    
     TOKEN_REGEX = '^(.+)/([^/]+)$'
+    STATS = [
+        "first_person_pronouns",
+        "second_person_pronouns",
+        "third_person_pronouns",
+        "coordinating_conjunctions",
+        "past_tense_verbs",
+        "future_tense_verbs",
+        "commas",
+        "colons_and_semicolons",
+        "dashes",
+        "parentheses",
+        "ellipses",
+        "common_nouns",
+        "proper_nouns",
+        "adverbs",
+        "wh_words",
+        "modern_slang_acroynms",
+        "all_upper_case_words",
+    ]
+
     def new_stats(self):
          return {
              "first_person_pronouns": 0,
@@ -103,12 +101,18 @@ class Statistics:
         self.logger = logging.getLogger(self.__class__.__name__)
         self.token_matcher = re.compile(Statistics.TOKEN_REGEX)
         with open(output_file, "w") as out:
+            # write header before writing stats
             out.write(self.get_header())
 
     def feed_header(self, tclass):
+        """
+        Each header signifies the begining of a new tweet
+        """
+
         if self.stats is None:
             self.stats = self.new_stats()
         else:
+            # output stats for the previous tweet
             self.print_stats()
             self.clear_stats()
         self.tclass = tclass
@@ -120,26 +124,11 @@ class Statistics:
             out.write(stats + "\n")
 
     def gen_stats(self):
-        order = [
-            "first_person_pronouns",
-            "second_person_pronouns",
-            "third_person_pronouns",
-            "coordinating_conjunctions",
-            "past_tense_verbs",
-            "future_tense_verbs",
-            "commas",
-            "colons_and_semicolons",
-            "dashes",
-            "parentheses",
-            "ellipses",
-            "common_nouns",
-            "proper_nouns",
-            "adverbs",
-            "wh_words",
-            "modern_slang_acroynms",
-            "all_upper_case_words",
-        ]
-        stats = ",".join([str(self.stats[k]) for k in order])
+        # generate required fields
+        stats = ",".join([str(self.stats[k]) for k in Statistics.STATS])
+
+        # special cases that need more attention
+        # these statistics cannot be computed on the fly (or hard to do so)
         try:
             avg_sentence_len = 1.0 * self.stats["n_tokens"] / (1.0 * self.stats["n_sentence"])
         except ZeroDivisionError:
