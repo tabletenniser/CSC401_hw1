@@ -40,7 +40,7 @@ class TweetTokenizer:
 
         # set up logging
         logging.basicConfig(
-                level=logging.DEBUG,
+                level=logging.WARNING,
                 filename=TweetTokenizer.LOG_FILE, 
                 format="%(asctime)-15s %(name)-12s %(levelname)s %(message)s",
                 datefmt='%y-%m-%d %H:%M:%S',
@@ -92,6 +92,7 @@ class TweetTokenizer:
                     (line_count >= class_4_lb and line_count <= class_4_ub) or 
                     self.parse_all):
                     yield line
+            self.logger.info("Processed " + str(line_count) + " tweets")
 
     def parse_tweet(self):
         """ Parse tweets based on rules specified in the handout

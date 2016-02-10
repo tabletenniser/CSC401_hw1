@@ -31,14 +31,19 @@ class Arff:
 
     def gen_arff(self):
         tag_matcher = re.compile(Arff.TAG_REGEX)
+        nheaders = 0
         for line in self.input_file():
             # check if the line read is a tag
             match = tag_matcher.match(line)
             if match:
                 # header =>
+                nheaders += 1
                 self.stats.feed_header(match.group(1))
             else:
                 self.stats.feed_line(line)
+        self.stats.print_stats()
+        self.logger.info("Processed " + str(self.stats.ntweets) + " tweets")
+        self.logger.info("Processed " + str(nheaders) + " headers")
         
 
 class Statistics:
@@ -97,6 +102,7 @@ class Statistics:
     def __init__(self, output_file):
         self.output_file = output_file
         self.stats = None
+        self.ntweets = 0
         self.load_tables()
         self.logger = logging.getLogger(self.__class__.__name__)
         self.token_matcher = re.compile(Statistics.TOKEN_REGEX)
@@ -108,6 +114,7 @@ class Statistics:
         """
         Each header signifies the begining of a new tweet
         """
+        self.ntweets += 1
 
         if self.stats is None:
             self.stats = self.new_stats()
@@ -293,4 +300,7 @@ class Statistics:
 
 if __name__ == "__main__":
     arff = Arff("test.twt", "test.arff", 100)
+    arff.gen_arff()
+
+    arff = Arff("train.twt", "train.arff", 100)
     arff.gen_arff()
