@@ -51,7 +51,8 @@ def convert_training_csv_to_watson_csv_format(input_csv_name, group_id, output_c
                     except Exception as e:
                         print "Unable to parse tweet " + line
                         continue
-                    text.replace('"', '')
+                    text = text.replace('"', '')
+                    text = text.replace('\t', '')
                     out.write('"%s","%s"\n'%(text,tclass))
         out.close()
 	return
@@ -163,8 +164,8 @@ if __name__ == "__main__":
 	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
 	password = 'WKW85r9ZVwuf'
 	n = 500
-	# create_classifier(username, password, n, input_file_prefix='ibmTrain')
-	# n = 2500
-	# create_classifier(username, password, n, input_file_prefix='ibmTrain')
-	# n = 5000
-	# create_classifier(username, password, n, input_file_prefix='ibmTrain')
+	create_classifier(username, password, n, input_file_prefix='ibmTrain')
+	n = 2500
+	create_classifier(username, password, n, input_file_prefix='ibmTrain')
+	n = 5000
+	create_classifier(username, password, n, input_file_prefix='ibmTrain')

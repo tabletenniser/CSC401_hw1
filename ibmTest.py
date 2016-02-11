@@ -1,78 +1,95 @@
 # ibmTest.py
-# 
+#
 # This file tests all 11 classifiers using the NLClassifier IBM Service
 # previously created using ibmTrain.py
-# 
-# TODO: You must fill out all of the functions in this file following 
+#
+# TODO: You must fill out all of the functions in this file following
 # 		the specifications exactly. DO NOT modify the headers of any
 #		functions. Doing so will cause your program to fail the autotester.
 #
 #		You may use whatever libraries you like (as long as they are available
 #		on CDF). You may find json, request, or pycurl helpful.
 #		You may also find it helpful to reuse some of your functions from ibmTrain.py.
-#
+import os
+from StringIO import StringIO
+import pycurl
 
 def get_classifier_ids(username,password):
-	# Retrieves a list of classifier ids from a NLClassifier service 
+	# Retrieves a list of classifier ids from a NLClassifier service
 	# an outputfile named ibmTrain#.csv (where # is n_lines_to_extract).
 	#
-	# Inputs: 
+	# Inputs:
 	# 	username - username for the NLClassifier to be used, as a string
 	#
 	# 	password - password for the NLClassifier to be used, as a string
 	#
-	#		
+	#
 	# Returns:
 	#	a list of classifier ids as strings
 	#
 	# Error Handling:
 	#	This function should throw an exception if the classifiers call fails for any reason
 	#
-	
-	#TODO: Fill in this function
-	
+        try:
+            url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers'
+
+            storage = StringIO()
+            c = pycurl.Curl()
+            c.setopt(c.URL, url)
+            c.setopt(pycurl.USERPWD, username+':'+password)
+            c.setopt(c.WRITEFUNCTION, storage.write)
+            c.perform()
+            c.close()
+            content = storage.getvalue()
+            print 'content is ',content
+
+            # cmd = 'curl -u %s:%s "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password)
+            # os.system(cmd)
+        except Exception as e:
+            raise e
+
 	return
-	
+
 
 def assert_all_classifiers_are_available(username, password, classifier_id_list):
-	# Asserts all classifiers in the classifier_id_list are 'Available' 
+	# Asserts all classifiers in the classifier_id_list are 'Available'
 	#
-	# Inputs: 
+	# Inputs:
 	# 	username - username for the NLClassifier to be used, as a string
 	#
 	# 	password - password for the NLClassifier to be used, as a string
 	#
 	#	classifier_id_list - a list of classifier ids as strings
-	#		
+	#
 	# Returns:
 	#	None
 	#
 	# Error Handling:
-	#	This function should throw an exception if the classifiers call fails for any reason AND 
+	#	This function should throw an exception if the classifiers call fails for any reason AND
 	#	It should throw an error if any classifier is NOT 'Available'
 	#
-	
+
 	#TODO: Fill in this function
-	
+
 	return
 
 def classify_single_text(username,password,classifier_id,text):
-	# Classifies a given text using a single classifier from an NLClassifier 
+	# Classifies a given text using a single classifier from an NLClassifier
 	# service
 	#
-	# Inputs: 
+	# Inputs:
 	# 	username - username for the NLClassifier to be used, as a string
 	#
 	# 	password - password for the NLClassifier to be used, as a string
 	#
 	#	classifier_id - a classifier id, as a string
-	#		
+	#
 	#	text - a string of text to be classified, not UTF-8 encoded
 	#		ex. "Oh, look a tweet!"
 	#
 	# Returns:
-	#	A "classification". Aka: 
-	#	a dictionary containing the top_class and the confidences of all the possible classes 
+	#	A "classification". Aka:
+	#	a dictionary containing the top_class and the confidences of all the possible classes
 	#	Format example:
 	#		{'top_class': 'class_name',
 	#		 'classes': [
@@ -82,31 +99,31 @@ def classify_single_text(username,password,classifier_id,text):
 	#		}
 	#
 	# Error Handling:
-	#	This function should throw an exception if the classify call fails for any reason 
+	#	This function should throw an exception if the classify call fails for any reason
 	#
-	
+
 	#TODO: Fill in this function
-	
+
 	return
 
 def classify_all_texts(username,password,input_csv_name):
-	# Classifies all texts in an input csv file using all classifiers for a given NLClassifier 
-	# service. 
+	# Classifies all texts in an input csv file using all classifiers for a given NLClassifier
+	# service.
 	#
-	# Inputs: 
+	# Inputs:
 	# 	username - username for the NLClassifier to be used, as a string
 	#
 	# 	password - password for the NLClassifier to be used, as a string
-	#	
-	#	input_csv_name - full path and name of an input csv file in the  
+	#
+	#	input_csv_name - full path and name of an input csv file in the
 	#		6 column format of the input test/training files
 	#
 	# Returns:
-	#	A list of "classifications". Aka: 
-	#	A list of dictionaries, one for each text, in order of lines in the 
+	#	A list of "classifications". Aka:
+	#	A list of dictionaries, one for each text, in order of lines in the
 	#	input file. Each element is a dictionary containing the top_class
 	#	and the confidences of all the possible classes (ie the same
-	#	format as returned by classify_single_text) 
+	#	format as returned by classify_single_text)
 	#	Format example:
 	#		[
 	#			{'top_class': 'class_name',
@@ -121,14 +138,14 @@ def classify_all_texts(username,password,input_csv_name):
 	#		]
 	#
 	# Error Handling:
-	#	This function should throw an exception if the classify call fails for any reason 
+	#	This function should throw an exception if the classify call fails for any reason
 	#	or if the input csv file is of an improper format.
 	#
-	
+
 	#TODO: Fill in this function
-	
+
 	return
-		
+
 
 def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
 	# Given a list of "classifications" for a given classifier, compute the accuracy of this
@@ -136,10 +153,10 @@ def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
 	#
 	# Inputs:
 	# 	classifier_dict - A list of "classifications". Aka:
-	#		A list of dictionaries, one for each text, in order of lines in the 
+	#		A list of dictionaries, one for each text, in order of lines in the
 	#		input file. Each element is a dictionary containing the top_class
 	#		and the confidences of all the possible classes (ie the same
-	#		format as returned by classify_single_text) 	
+	#		format as returned by classify_single_text)
 	# 		Format example:
 	#			[
 	#				{'top_class': 'class_name',
@@ -153,7 +170,7 @@ def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
 	#				}
 	#			]
 	#
-	#	input_csv_name - full path and name of an input csv file in the  
+	#	input_csv_name - full path and name of an input csv file in the
 	#		6 column format of the input test/training files
 	#
 	# Returns:
@@ -161,25 +178,25 @@ def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
 	#	See the handout for more info.
 	#
 	# Error Handling:
-	# 	This function should throw an error if there is an issue with the 
+	# 	This function should throw an error if there is an issue with the
 	#	inputs.
 	#
-	
+
 	#TODO: fill in this function
-	
+
 	return
 
 def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_file_name):
-	# Given a list of "classifications" for a given classifier, compute the average 
+	# Given a list of "classifications" for a given classifier, compute the average
 	# confidence of this classifier wrt the selected class, according to the input
-	# csv file. 
+	# csv file.
 	#
 	# Inputs:
 	# 	classifier_dict - A list of "classifications". Aka:
-	#		A list of dictionaries, one for each text, in order of lines in the 
+	#		A list of dictionaries, one for each text, in order of lines in the
 	#		input file. Each element is a dictionary containing the top_class
 	#		and the confidences of all the possible classes (ie the same
-	#		format as returned by classify_single_text) 	
+	#		format as returned by classify_single_text)
 	# 		Format example:
 	#			[
 	#				{'top_class': 'class_name',
@@ -193,7 +210,7 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
 	#				}
 	#			]
 	#
-	#	input_csv_name - full path and name of an input csv file in the  
+	#	input_csv_name - full path and name of an input csv file in the
 	#		6 column format of the input test/training files
 	#
 	# Returns:
@@ -201,25 +218,28 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
 	#	See the handout for more info.
 	#
 	# Error Handling:
-	# 	This function should throw an error if there is an issue with the 
+	# 	This function should throw an error if there is an issue with the
 	#	inputs.
 	#
-	
+
 	#TODO: fill in this function
-	
+
 	return
 
 
 if __name__ == "__main__":
 
 	input_test_data = '<ADD FILE NAME HERE>'
-	
+
 	#STEP 1: Ensure all 11 classifiers are ready for testing
-	
+	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
+	password = 'WKW85r9ZVwuf'
+        get_classifier_ids(username, password)
+
 	#STEP 2: Test the test data on all classifiers
-	
+
 	#STEP 3: Compute the accuracy for each classifier
-	
+
 	#STEP 4: Compute the confidence of each class for each classifier
-	
-	
+
+
