@@ -11,8 +11,7 @@
 #		on CDF). You may find json, request, or pycurl helpful.
 #		You may also find it helpful to reuse some of your functions from ibmTrain.py.
 import os
-from StringIO import StringIO
-import pycurl
+import requests
 
 def get_classifier_ids(username,password):
 	# Retrieves a list of classifier ids from a NLClassifier service
@@ -32,16 +31,11 @@ def get_classifier_ids(username,password):
 	#
         try:
             url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers'
-
-            storage = StringIO()
-            c = pycurl.Curl()
-            c.setopt(c.URL, url)
-            c.setopt(pycurl.USERPWD, username+':'+password)
-            c.setopt(c.WRITEFUNCTION, storage.write)
-            c.perform()
-            c.close()
-            content = storage.getvalue()
-            print 'content is ',content
+            r = requests.get(url, auth=(username, password))
+            print r.status_code
+            print r.text
+            print r.headers['content-type']
+            print r.json()
 
             # cmd = 'curl -u %s:%s "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password)
             # os.system(cmd)
