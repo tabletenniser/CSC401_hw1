@@ -10,10 +10,9 @@ class Arff:
     TAG_REGEX = "^<A=(\d)>$"
     LOG_FILE = "buildarff.log"
 
-    def __init__(self, input_fn, output_fn, max_tweet):
+    def __init__(self, input_fn, output_fn):
         self.input_fn = input_fn
         self.output_fn = output_fn
-        self.max_tweet = max_tweet
         # set up logging
         logging.basicConfig(
                 level=logging.DEBUG,
@@ -300,8 +299,8 @@ class Statistics:
         self.stats = self.new_stats()
 
 if __name__ == "__main__":
-    arff = Arff("test.twt", "test.arff", 100)
+    arff = Arff("test.twt", "test.arff")
     arff.gen_arff()
 
-    arff = Arff("train.twt", "train.arff", 100)
+    arff = Arff("train.twt", "train.arff")
     arff.gen_arff()
