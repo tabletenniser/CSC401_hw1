@@ -18,7 +18,7 @@ class TweetTokenizer:
     ASCII_DELIM = "xxDELIMxx"
     LOG_FILE = "./parser.log"
     HTML_TAGS = '<[^>]+>'
-    TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
+    TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
     END_SENTENCE_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
     PUNCTUATION_REGEX = '^([^?!\.]+)([?!]+|\.+)$'
     PUNCTUATION_REGEX_2 = '^([\(\),.;:])?([^\(\),.;:]+)([\(\),.;:])?$'

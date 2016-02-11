@@ -39,8 +39,8 @@ def convert_training_csv_to_watson_csv_format(input_csv_name, group_id, output_c
         class_4_ub = class_0_ub + 800000
 
         line_count = 0
-        out = open(output_csv_name, 'w')
-        with open(input_csv_name, "r") as f:
+        out = codecs.open(output_csv_name, 'w', 'utf-8')
+        with codecs.open(input_csv_name, "r", 'latin-1') as f:
             for line in f:
                 line_count += 1
                 if ((line_count >= class_0_lb and line_count <= class_0_ub) or
