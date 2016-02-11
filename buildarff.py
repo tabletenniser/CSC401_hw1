@@ -17,13 +17,13 @@ class Arff:
         # set up logging
         logging.basicConfig(
                 level=logging.DEBUG,
-                filename=Arff.LOG_FILE, 
+                filename=Arff.LOG_FILE,
                 format="%(asctime)-15s %(name)-12s %(levelname)s %(message)s",
                 datefmt='%y-%m-%d %H:%M:%S',
         )
         self.logger = logging.getLogger(self.__class__.__name__)
         self.stats = Statistics(output_fn)
-    
+
     def input_file(self):
         with open(self.input_fn, "r") as f:
             for line in f:
@@ -44,7 +44,7 @@ class Arff:
         self.stats.print_stats()
         self.logger.info("Processed " + str(self.stats.ntweets) + " tweets")
         self.logger.info("Processed " + str(nheaders) + " headers")
-        
+
 
 class Statistics:
     """
@@ -123,7 +123,7 @@ class Statistics:
             self.print_stats()
             self.clear_stats()
         self.tclass = tclass
-    
+
     def print_stats(self):
         with open(self.output_file, "a") as out:
             self.logger.debug(self.stats)
@@ -185,7 +185,7 @@ class Statistics:
             "@ATTRIBUTE tclass {0, 4}\n" \
             "\n" \
             "@DATA \n"
-        return header 
+        return header
 
     def feed_line(self, line):
         tokens = self.tokenize(line)
@@ -202,13 +202,13 @@ class Statistics:
             self.recognize_token(word, tag)
 
     def recognize_token(self, word, tag):
-        # recognize first person 
+        # recognize first person
         if word.lower() in self.list_first_person:
             self.stats["first_person_pronouns"] += 1
-        # recognize second person 
+        # recognize second person
         elif word.lower() in self.list_second_person:
             self.stats["second_person_pronouns"] += 1
-        # recognize second person 
+        # recognize second person
         elif word.lower() in self.list_third_person:
             self.stats["third_person_pronouns"] += 1
         elif word.lower() in self.list_future_tense:
@@ -228,7 +228,7 @@ class Statistics:
         # modern slang
         elif word.lower() in self.list_modern_slang:
             self.stats["modern_slang_acroynms"] += 1
-        
+
         # punctuation stats:
         self.stats["commas"] += word.count(",")
         self.stats["colons_and_semicolons"] += word.count(";") + word.count(":")
@@ -247,11 +247,11 @@ class Statistics:
             self.logger.debug("Matched future tense vb at verb" + word)
         else:
             self.going_to_VB = 0
-        
+
         # word in all cap
         if word.upper() == word and len(word) >= 2:
             self.stats["all_upper_case_words"] += 1
-        
+
         # for avg token len
         if word not in self.list_punctuations:
             self.stats["n_chars"] += len(word)

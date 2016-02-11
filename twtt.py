@@ -41,7 +41,7 @@ class TweetTokenizer:
         # set up logging
         logging.basicConfig(
                 level=logging.WARNING,
-                filename=TweetTokenizer.LOG_FILE, 
+                filename=TweetTokenizer.LOG_FILE,
                 format="%(asctime)-15s %(name)-12s %(levelname)s %(message)s",
                 datefmt='%y-%m-%d %H:%M:%S',
         )
@@ -89,7 +89,7 @@ class TweetTokenizer:
             for line in f:
                 line_count += 1
                 if ((line_count >= class_0_lb and line_count <= class_0_ub) or
-                    (line_count >= class_4_lb and line_count <= class_4_ub) or 
+                    (line_count >= class_4_lb and line_count <= class_4_ub) or
                     self.parse_all):
                     yield line
             self.logger.info("Processed " + str(line_count) + " tweets")
@@ -134,7 +134,7 @@ class TweetTokenizer:
                 for key in self.ascii_table:
                     text = text.replace(key, self.ascii_table[key])
                 self.logger.debug("step2: " + text)
-                
+
                 # 3- filter out all HTTP/WWW tags
                 text = " ".join(
                         filter(
@@ -168,7 +168,7 @@ class TweetTokenizer:
     def assemble(self, texts, tclass):
         self.output_file_write("<A={cls}>".format(cls=tclass))
         map(lambda sentence: self.output_file_write(" ".join(sentence)), texts)
-    
+
     def tag_PoS(self, texts):
         if self.tagger is None:
             self.tagger = NLPlib.NLPlib()
@@ -178,7 +178,7 @@ class TweetTokenizer:
             processed_texts.append(
                     [ x + '/' + y for x, y in zip(sentence, tags)]
             )
-        return processed_texts 
+        return processed_texts
 
     def proc_token(self, token):
         if isinstance(token, list):
@@ -203,10 +203,10 @@ class TweetTokenizer:
         # break up punctuations
         pun_match = pun_matcher.match(token)
         tokens = [token]
-        
+
         if pun_match:
             tokens = list(pun_match.groups())
-        
+
         # break clitics and/or possessive
         cli_match = cli_matcher.match(tokens[0])
         pos_match = pos_matcher.match(tokens[0])
@@ -221,7 +221,7 @@ class TweetTokenizer:
         elif pos_match:
             self.logger.info("Matched possessive at '{c}'".format(c=tokens[0]))
             tokens = list(pos_match.groups()) + tokens[1:]
-        
+
         self.logger.debug("{tok} ==> {stok}".format(tok=token, stok=str(tokens)))
 
         # break by other punctuations
@@ -236,9 +236,9 @@ class TweetTokenizer:
                tokens += filter(lambda x: x is not None, pmatch.groups())
            else:
                tokens.append(token)
-            
+
         return tokens
-    
+
     def break_punctuations(self, texts):
         result = [[] for _ in xrange(len(texts))]
         for level in xrange(len(texts)):
@@ -247,7 +247,7 @@ class TweetTokenizer:
                 result[level].extend(tokens)
         return result
 
-    def load_abbrv_table(self): 
+    def load_abbrv_table(self):
         self.logger.info("Loading abbrv table")
         self.abbrv_table = dict()
         self.rabbrv_table = dict()
@@ -282,7 +282,7 @@ class TweetTokenizer:
         # tokenize
         tokens = text.split()
 
-        # replace all abbrv. with its sha, unless we 
+        # replace all abbrv. with its sha, unless we
         # have reasons to believe that this abbrv ends
         # a particular sentence
         for token_idx in xrange(len(tokens)):
@@ -322,9 +322,9 @@ class TweetTokenizer:
                 )
                 level += 1
         return texts
-    
+
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train.twt", parse_all=False)
+    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train_gid55.twt", parse_all=False)
     twt.parse_tweet()
 
     twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", 55, "test.twt", parse_all=True)
