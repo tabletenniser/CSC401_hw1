@@ -2,7 +2,7 @@
 % 
 % 2. Sources:
 %      (a) Creator: Y. Kang and Z. Wang
-%      (c) Date: Feb, 2016
+%      (b) Date: Feb, 2016
 @RELATION NLP_project
 
 @ATTRIBUTE first_person_pronouns  NUMERIC

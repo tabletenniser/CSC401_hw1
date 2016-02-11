@@ -12,7 +12,7 @@ TODO:
 
 
 class TweetTokenizer:
-    GID = 0
+    group_number = 55
     ASCII_TABLE = "./ascii.csv"
     ABBRV_TABLE = "./abbrev.english"
     ASCII_DELIM = "xxDELIMxx"
@@ -27,10 +27,10 @@ class TweetTokenizer:
     DEBUG_LIMIT = 0
 
 
-    def __init__(self, input_file, group_name, output_file, parse_all=False):
+    def __init__(self, input_file, group_number, output_file, parse_all=False):
         self.parse_all = parse_all
         self.input_file = input_file
-        self.group_name = group_name
+        self.group_number = group_number
         self.output_file_name = output_file
         self.output_file = None
         self.ascii_table = None
@@ -72,10 +72,10 @@ class TweetTokenizer:
         #self.logger.info("Table: " + str(self.ascii_table))
 
     def get_tweet(self):
-        """ Get tweets based on GID
+        """ Get tweets based on group_number
         """
-        class_0_lb = TweetTokenizer.GID * 5500
-        class_0_ub = (TweetTokenizer.GID + 1) * 5500 - 1
+        class_0_lb = TweetTokenizer.group_number * 5500
+        class_0_ub = (TweetTokenizer.group_number + 1) * 5500 - 1
 
         class_4_lb = class_0_lb + 800000
         class_4_ub = class_0_ub + 800000
@@ -324,8 +324,8 @@ class TweetTokenizer:
         return texts
     
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", "Group", "train.twt", parse_all=False)
+    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train.twt", parse_all=False)
     twt.parse_tweet()
 
-    twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", "Group", "test.twt", parse_all=True)
+    twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", 55, "test.twt", parse_all=True)
     twt.parse_tweet()

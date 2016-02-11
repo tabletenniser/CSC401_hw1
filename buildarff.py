@@ -159,7 +159,7 @@ class Statistics:
             "% \n" \
             "% 2. Sources:\n" \
             "%      (a) Creator: Y. Kang and Z. Wang\n" \
-            "%      (c) Date: Feb, 2016\n" \
+            "%      (b) Date: Feb, 2016\n" \
             "@RELATION NLP_project\n" \
             "\n" \
             "@ATTRIBUTE first_person_pronouns  NUMERIC\n" \
