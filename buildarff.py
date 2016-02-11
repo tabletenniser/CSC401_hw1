@@ -10,9 +10,10 @@ class Arff:
     TAG_REGEX = "^<A=(\d)>$"
     LOG_FILE = "buildarff.log"
 
-    def __init__(self, input_fn, output_fn):
+    def __init__(self, input_fn, output_fn, max_tweet):
         self.input_fn = input_fn
         self.output_fn = output_fn
+        self.max_tweet = max_tweet
         # set up logging
         logging.basicConfig(
                 level=logging.DEBUG,
@@ -207,9 +208,10 @@ class Statistics:
         # recognize second person
         elif word.lower() in self.list_second_person:
             self.stats["second_person_pronouns"] += 1
-        # recognize second person
+        # recognize third person
         elif word.lower() in self.list_third_person:
             self.stats["third_person_pronouns"] += 1
+        # recognize future tense
         elif word.lower() in self.list_future_tense:
             self.stats["future_tense_verbs"] += 1
         # common Nouns
@@ -302,5 +304,6 @@ if __name__ == "__main__":
     arff = Arff("test.twt", "test.arff")
     arff.gen_arff()
 
-    arff = Arff("train.twt", "train.arff")
+    # arff = Arff("train_gid55.twt", "train_gid55.arff")
+    arff = Arff("train_gid55.twt", "train_gid55.arff", 500)
     arff.gen_arff()

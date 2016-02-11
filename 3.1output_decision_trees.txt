@@ -1,0 +1,1802 @@
+
+J48 pruned tree
+------------------
+
+first_person_pronouns <= 0
+|   ellipses <= 0
+|   |   adverbs <= 0
+|   |   |   third_person_pronouns <= 1
+|   |   |   |   dashes <= 0
+|   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.727273
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (210.0/87.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (18.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.368421: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.368421: 4 (96.0/26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.142857
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 10.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.611111: 4 (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.611111: 0 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.526316: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.526316: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 10.5: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.142857: 4 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 3.25: 0 (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 3.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.368421: 4 (43.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.368421
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.55: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.55: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.25: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.75: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.25: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.727273
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 0: 4 (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 7.5: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 7.5: 0 (22.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (602.0/157.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.411765: 4 (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.411765: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5: 4 (25.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5: 0 (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0: 4 (46.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.652174: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.652174: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (17.0/1.0)
+|   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 6.1875: 4 (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 6.1875: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (5.0)
+|   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.333333: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.333333
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (24.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (3.0)
+|   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 2.75
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 6.5: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 6.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 2.75: 4 (224.0/39.0)
+|   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (108.0/31.0)
+|   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (32.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.2: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.2: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5: 4 (4.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.3125: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.3125: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (2.0)
+|   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (58.0/11.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 10.5: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 10.5: 4 (2.0)
+|   |   |   |   |   common_nouns > 5: 4 (214.0/42.0)
+|   |   |   |   dashes > 0
+|   |   |   |   |   dashes <= 1: 4 (110.0/14.0)
+|   |   |   |   |   dashes > 1
+|   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 4: 4 (2.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 4: 0 (8.0)
+|   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (2.0)
+|   |   |   |   |   |   |   n_sentences > 1: 4 (17.0/4.0)
+|   |   |   |   |   |   third_person_pronouns > 0: 4 (4.0)
+|   |   |   third_person_pronouns > 1
+|   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   common_nouns <= 4
+|   |   |   |   |   |   common_nouns <= 1: 4 (4.0)
+|   |   |   |   |   |   common_nouns > 1
+|   |   |   |   |   |   |   avg_token_len <= 4.227273
+|   |   |   |   |   |   |   |   avg_token_len <= 3.75: 0 (2.0)
+|   |   |   |   |   |   |   |   avg_token_len > 3.75: 4 (4.0)
+|   |   |   |   |   |   |   avg_token_len > 4.227273: 0 (9.0/1.0)
+|   |   |   |   |   common_nouns > 4: 4 (11.0/2.0)
+|   |   |   |   all_upper_case_words > 0: 0 (7.0/1.0)
+|   |   adverbs > 0
+|   |   |   second_person_pronouns <= 0
+|   |   |   |   common_nouns <= 2
+|   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   common_nouns <= 0
+|   |   |   |   |   |   |   |   n_sentences <= 1: 0 (34.0/11.0)
+|   |   |   |   |   |   |   |   n_sentences > 1: 4 (4.0/1.0)
+|   |   |   |   |   |   |   common_nouns > 0
+|   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   avg_token_len <= 4.888889: 0 (134.0/56.0)
+|   |   |   |   |   |   |   |   |   avg_token_len > 4.888889
+|   |   |   |   |   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.5: 4 (30.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.6875: 0 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.6875: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.9: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 1: 4 (53.0/18.0)
+|   |   |   |   |   |   |   |   |   |   dashes > 0: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 1: 4 (62.0/19.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (4.0)
+|   |   |   |   |   |   third_person_pronouns > 0: 0 (90.0/36.0)
+|   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 0 (67.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 1: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.75: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.1: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   adverbs > 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (45.0/13.0)
+|   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   commas <= 0: 0 (19.0/6.0)
+|   |   |   |   |   |   |   |   |   commas > 0: 4 (3.0)
+|   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   avg_sentence_len <= 8.5: 0 (3.0)
+|   |   |   |   |   |   |   |   avg_sentence_len > 8.5: 4 (6.0/1.0)
+|   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   avg_sentence_len <= 11: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   avg_sentence_len > 11: 4 (2.0)
+|   |   |   |   |   |   |   all_upper_case_words > 0: 0 (6.0)
+|   |   |   |   common_nouns > 2
+|   |   |   |   |   proper_nouns <= 2
+|   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.038462
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 0 (30.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.846154: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.846154
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.96: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.96: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.8125: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.8125: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.038462: 0 (20.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.0625
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.666667: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.666667: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.0625: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.75: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.75: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11.666667: 4 (107.0/38.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11.666667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.285714: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.285714: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.5: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.625: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.625: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.791667: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.791667: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 5.045455: 4 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 5.045455: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (22.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 10: 4 (34.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 10: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (33.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 4 (60.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.666667: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.666667: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 3: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (21.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 10.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 10.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.176471: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.176471: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1: 0 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 3: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   dashes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 0 (27.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.541667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.541667: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dashes > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   third_person_pronouns > 2: 4 (3.0)
+|   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (106.0/23.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 13.5
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.652174: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.652174: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 13.5: 4 (5.0)
+|   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12.5: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 19
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2: 4 (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 19: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 20: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 20: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 16: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 16: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0: 4 (53.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.090909: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.090909: 4 (10.0)
+|   |   |   |   |   |   |   parentheses > 0
+|   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0: 4 (11.0)
+|   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.7: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 4.7: 0 (2.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (6.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   avg_sentence_len <= 5.4: 4 (6.0/1.0)
+|   |   |   |   |   |   |   avg_sentence_len > 5.4
+|   |   |   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.2: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.2: 4 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11.666667: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11.666667: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   dashes > 0
+|   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (3.0/1.0)
+|   |   |   |   |   proper_nouns > 2
+|   |   |   |   |   |   n_sentences <= 2: 4 (25.0/3.0)
+|   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   dashes <= 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   dashes > 0: 0 (2.0)
+|   |   |   |   |   |   |   commas > 0: 0 (2.0)
+|   |   |   second_person_pronouns > 0
+|   |   |   |   n_sentences <= 2
+|   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (92.0/28.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 0 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.481481: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.481481: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12.5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   adverbs > 3: 0 (3.0)
+|   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.875: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 3.875
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (46.0/7.0)
+|   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14
+|   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 2: 4 (29.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 3: 0 (2.0)
+|   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (15.0/4.0)
+|   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   adverbs <= 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   parentheses > 0: 0 (2.0)
+|   |   |   |   |   |   dashes > 0: 4 (21.0/4.0)
+|   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (7.0)
+|   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   common_nouns <= 6: 0 (3.0)
+|   |   |   |   |   |   |   |   |   common_nouns > 6: 4 (3.0)
+|   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (5.0/1.0)
+|   |   |   |   |   |   second_person_pronouns > 1: 0 (12.0)
+|   |   |   |   n_sentences > 2: 4 (82.0/12.0)
+|   ellipses > 0
+|   |   common_nouns <= 2
+|   |   |   adverbs <= 1
+|   |   |   |   proper_nouns <= 0
+|   |   |   |   |   common_nouns <= 1: 0 (95.0/26.0)
+|   |   |   |   |   common_nouns > 1
+|   |   |   |   |   |   third_person_pronouns <= 0: 0 (54.0/20.0)
+|   |   |   |   |   |   third_person_pronouns > 0: 4 (10.0/3.0)
+|   |   |   |   proper_nouns > 0
+|   |   |   |   |   common_nouns <= 1
+|   |   |   |   |   |   adverbs <= 0: 4 (15.0/1.0)
+|   |   |   |   |   |   adverbs > 0: 0 (7.0/2.0)
+|   |   |   |   |   common_nouns > 1: 0 (16.0/5.0)
+|   |   |   adverbs > 1
+|   |   |   |   commas <= 0
+|   |   |   |   |   avg_sentence_len <= 11.5: 0 (38.0/7.0)
+|   |   |   |   |   avg_sentence_len > 11.5: 4 (3.0)
+|   |   |   |   commas > 0: 0 (9.0)
+|   |   common_nouns > 2
+|   |   |   second_person_pronouns <= 0
+|   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   |   dashes <= 0
+|   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.32: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.32
+|   |   |   |   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (25.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.875
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.875: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   commas > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 2: 4 (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 2: 0 (3.0)
+|   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 9
+|   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 1: 4 (48.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.153846: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.153846: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.086957: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.086957: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   commas > 1: 4 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 9: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0: 0 (7.0/2.0)
+|   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (5.0)
+|   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 0 (2.0)
+|   |   |   |   |   |   |   dashes > 0
+|   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   common_nouns <= 6: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   common_nouns > 6: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   adverbs > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   commas > 0: 4 (2.0)
+|   |   |   |   |   |   parentheses > 0
+|   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   parentheses <= 2: 0 (6.0/2.0)
+|   |   |   |   |   |   |   |   parentheses > 2: 4 (2.0)
+|   |   |   |   |   |   |   ellipses > 1: 4 (4.0)
+|   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   common_nouns <= 4
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14.5: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   common_nouns > 4: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.73913: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 4.73913: 4 (2.0)
+|   |   |   |   |   |   |   |   commas > 0: 4 (3.0)
+|   |   |   |   |   |   |   n_sentences > 2: 0 (4.0)
+|   |   |   |   |   |   proper_nouns > 1: 4 (2.0)
+|   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   avg_sentence_len <= 5.428571: 4 (7.0)
+|   |   |   |   |   avg_sentence_len > 5.428571
+|   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   common_nouns <= 6: 0 (35.0/7.0)
+|   |   |   |   |   |   |   |   |   common_nouns > 6: 4 (9.0/3.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   adverbs <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.724138: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.724138: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (5.0)
+|   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (5.0)
+|   |   |   |   |   |   colons_and_semicolons > 1: 4 (4.0/1.0)
+|   |   |   second_person_pronouns > 0
+|   |   |   |   all_upper_case_words <= 3
+|   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   wh_words <= 1
+|   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 4 (16.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (6.0)
+|   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.684211: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.684211: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   adverbs > 1: 4 (3.0)
+|   |   |   |   |   |   |   |   n_sentences > 2: 4 (13.0/1.0)
+|   |   |   |   |   |   |   wh_words > 1: 0 (3.0)
+|   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   common_nouns <= 3: 0 (4.0)
+|   |   |   |   |   |   |   common_nouns > 3: 4 (12.0/3.0)
+|   |   |   |   |   future_tense_verbs > 0: 4 (7.0/1.0)
+|   |   |   |   all_upper_case_words > 3: 0 (5.0/1.0)
+first_person_pronouns > 0
+|   dashes <= 0
+|   |   common_nouns <= 1
+|   |   |   commas <= 0
+|   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   common_nouns <= 0
+|   |   |   |   |   |   avg_sentence_len <= 2.75
+|   |   |   |   |   |   |   avg_token_len <= 3.1: 0 (3.0/1.0)
+|   |   |   |   |   |   |   avg_token_len > 3.1: 4 (3.0)
+|   |   |   |   |   |   avg_sentence_len > 2.75: 0 (98.0/13.0)
+|   |   |   |   |   common_nouns > 0
+|   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   second_person_pronouns <= 0: 0 (348.0/75.0)
+|   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   all_upper_case_words <= 1: 0 (44.0/6.0)
+|   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (5.0)
+|   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   proper_nouns <= 3
+|   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.25: 0 (32.0/7.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 7.25
+|   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.125: 4 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.125
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.294118: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.294118: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9
+|   |   |   |   |   |   |   |   |   |   |   adverbs <= 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   adverbs > 0: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   proper_nouns > 3: 0 (5.0)
+|   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   common_nouns <= 0: 0 (6.0)
+|   |   |   |   |   common_nouns > 0
+|   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   avg_sentence_len <= 10.5
+|   |   |   |   |   |   |   |   avg_sentence_len <= 6.5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   avg_sentence_len > 6.5: 4 (8.0)
+|   |   |   |   |   |   |   avg_sentence_len > 10.5
+|   |   |   |   |   |   |   |   avg_token_len <= 4.2: 0 (7.0)
+|   |   |   |   |   |   |   |   avg_token_len > 4.2: 4 (3.0/1.0)
+|   |   |   |   |   |   n_sentences > 1: 0 (7.0/1.0)
+|   |   |   commas > 0
+|   |   |   |   avg_token_len <= 4.8
+|   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 16.5: 0 (42.0/10.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 16.5: 4 (3.0)
+|   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 1: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   first_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (2.0)
+|   |   |   |   |   |   |   ellipses > 0: 0 (5.0)
+|   |   |   |   |   |   colons_and_semicolons > 0: 4 (4.0/1.0)
+|   |   |   |   |   wh_words > 0: 0 (6.0)
+|   |   |   |   avg_token_len > 4.8: 4 (9.0)
+|   |   common_nouns > 1
+|   |   |   first_person_pronouns <= 1
+|   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   commas <= 0
+|   |   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   |   adverbs <= 0
+|   |   |   |   |   |   |   |   common_nouns <= 8
+|   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.909091
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5: 0 (41.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.464286: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.464286: 4 (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 0 (21.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (19.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.909091
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (120.0/53.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 3.375: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 3.375: 4 (37.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.5: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.5: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11.5: 0 (38.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11.5: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5: 0 (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.363636
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.363636: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 3: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.15: 0 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 6.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1: 0 (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.571429: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.571429: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 6.8: 4 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.75: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.75: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.666667: 4 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.666667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.272727: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.272727: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.8: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.8: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.545455: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.545455: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 6: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2: 4 (20.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 2: 0 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (21.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (21.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.333333: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.333333: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 0 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 4 (63.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 3: 4 (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (29.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   ellipses > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   common_nouns > 8
+|   |   |   |   |   |   |   |   |   avg_token_len <= 3.689655: 4 (3.0)
+|   |   |   |   |   |   |   |   |   avg_token_len > 3.689655: 0 (24.0/4.0)
+|   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.708333
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (90.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2: 4 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0: 0 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 4.6: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 4.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 3: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 7: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.708333
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2: 0 (177.0/61.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 4 (13.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 17
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 0 (73.0/36.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.764706
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.333333: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.333333: 0 (15.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.764706: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 17: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.333333: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.333333: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.24: 0 (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.24: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.6: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.5625: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.5625: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.636364
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 10.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 10.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.636364: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.941176
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 15: 0 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 15: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.941176
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7: 4 (30.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 7: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 3: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2: 0 (96.0/35.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2: 0 (20.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.75: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.75: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14.5: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2: 4 (20.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.294118: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.294118: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 6.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 6.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.588235
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.333333: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.333333: 4 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.588235: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 0 (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.961538: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.961538: 0 (20.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.533333: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.533333: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 6: 0 (35.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 6: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.157895: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.157895: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 1: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (5.0)
+|   |   |   |   |   |   |   |   |   adverbs > 3: 0 (42.0/10.0)
+|   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 3
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.166667: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.166667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 4 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 6.25: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 6.25: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   adverbs > 3: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 4 (4.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 3: 4 (5.0)
+|   |   |   |   |   |   parentheses > 0
+|   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   avg_token_len <= 4.961538
+|   |   |   |   |   |   |   |   |   second_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.25
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 4.25: 0 (9.0)
+|   |   |   |   |   |   |   |   |   second_person_pronouns > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   avg_token_len > 4.961538: 4 (7.0)
+|   |   |   |   |   |   |   wh_words > 0: 4 (6.0/1.0)
+|   |   |   |   |   commas > 0
+|   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.111111
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (22.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 7.5: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 7.5: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (37.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14.5: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14.5: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 2: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   parentheses > 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12.5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.111111
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 4 (133.0/45.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   ellipses <= 1
+|   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1: 0 (40.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.074074: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.074074: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   ellipses > 1
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 4 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   future_tense_verbs > 0: 4 (26.0/7.0)
+|   |   |   |   |   |   |   commas > 1
+|   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   commas <= 3
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (29.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11.666667: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11.666667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.722222: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.722222: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 4 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.73913: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.73913: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.05: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.05: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.12: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.12: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (9.0)
+|   |   |   |   |   |   |   |   |   |   commas > 3
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.041667: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   avg_token_len > 4.041667: 4 (3.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (22.0/2.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.666667: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.666667: 0 (2.0)
+|   |   |   |   |   |   |   |   |   ellipses > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   second_person_pronouns > 1
+|   |   |   |   |   |   |   common_nouns <= 8
+|   |   |   |   |   |   |   |   commas <= 2
+|   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0: 4 (35.0/3.0)
+|   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 13: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   avg_sentence_len > 13: 0 (2.0)
+|   |   |   |   |   |   |   |   commas > 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   common_nouns > 8: 0 (3.0)
+|   |   |   |   third_person_pronouns > 1
+|   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   adverbs <= 4
+|   |   |   |   |   |   |   n_sentences <= 1: 0 (47.0/9.0)
+|   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   third_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 2: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   wh_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.346154: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.346154: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 4: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wh_words > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11.5
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 2: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11.5: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (4.0)
+|   |   |   |   |   |   |   |   third_person_pronouns > 2
+|   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   common_nouns > 7: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   wh_words > 0: 0 (8.0)
+|   |   |   |   |   |   adverbs > 4: 0 (8.0)
+|   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   commas <= 0: 0 (14.0/5.0)
+|   |   |   |   |   |   commas > 0: 4 (5.0)
+|   |   |   first_person_pronouns > 1
+|   |   |   |   parentheses <= 0
+|   |   |   |   |   all_upper_case_words <= 5
+|   |   |   |   |   |   avg_token_len <= 5.388889
+|   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   first_person_pronouns <= 4
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 0 (833.0/210.0)
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 9
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 2: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 15.5: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 15.5: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.318182: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.318182: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.8125: 0 (23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.8125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0: 0 (30.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.16: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.16: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 1: 0 (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 10: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 10: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.136364: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.136364: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 4 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 9
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 2: 4 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 2: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.115385
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 11: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 11: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 3: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.115385: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 18.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 18.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.964286
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.964286: 4 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 4.117647: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 4.117647: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 3: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 4: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (19.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 3: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 3: 0 (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.68: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.68: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (47.0/12.0)
+|   |   |   |   |   |   |   |   |   first_person_pronouns > 4
+|   |   |   |   |   |   |   |   |   |   ellipses <= 0: 0 (28.0/2.0)
+|   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14.5: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14.5: 4 (2.0)
+|   |   |   |   |   |   |   |   future_tense_verbs > 0
+|   |   |   |   |   |   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0: 4 (18.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 4: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   ellipses > 0
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0: 4 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 5.75: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 5.75: 4 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   first_person_pronouns > 2
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 2: 0 (58.0/17.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 2: 4 (2.0)
+|   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 0 (62.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 6.8: 4 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 6.8: 0 (25.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 1: 0 (17.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1: 4 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.5: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 1: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 1: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.633333: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.633333: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 14.5: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 14.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.954545
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.769231
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.681818: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.681818: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.769231: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.954545: 4 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7: 4 (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 7: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1: 0 (33.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0: 4 (15.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 1: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0: 4 (15.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   first_person_pronouns > 2
+|   |   |   |   |   |   |   |   |   |   common_nouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 9.333333
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.666667: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.666667: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 9.333333: 0 (31.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.785714: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.785714: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   common_nouns > 3
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 18.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 18.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 28: 4 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 28: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 1: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 3: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 0 (65.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 7: 4 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 7: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.5: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 1: 4 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wh_words > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (18.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   colons_and_semicolons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 5: 0 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len <= 3.586207: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_token_len > 3.586207: 4 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   future_tense_verbs > 0: 0 (48.0/11.0)
+|   |   |   |   |   |   avg_token_len > 5.388889
+|   |   |   |   |   |   |   first_person_pronouns <= 2: 4 (24.0/5.0)
+|   |   |   |   |   |   |   first_person_pronouns > 2: 0 (2.0)
+|   |   |   |   |   all_upper_case_words > 5: 0 (26.0/2.0)
+|   |   |   |   parentheses > 0
+|   |   |   |   |   commas <= 0
+|   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   common_nouns <= 7
+|   |   |   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   |   |   first_person_pronouns <= 3
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 4 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs <= 1: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   adverbs > 1: 4 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   second_person_pronouns > 0: 4 (4.0)
+|   |   |   |   |   |   |   |   |   first_person_pronouns > 3: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   wh_words > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   common_nouns > 7: 0 (6.0)
+|   |   |   |   |   |   future_tense_verbs > 0: 0 (4.0)
+|   |   |   |   |   commas > 0: 4 (26.0/7.0)
+|   dashes > 0
+|   |   second_person_pronouns <= 0
+|   |   |   adverbs <= 0
+|   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   dashes <= 1: 4 (90.0/24.0)
+|   |   |   |   |   dashes > 1
+|   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   proper_nouns <= 1
+|   |   |   |   |   |   |   |   dashes <= 2: 0 (12.0/3.0)
+|   |   |   |   |   |   |   |   dashes > 2: 4 (3.0/1.0)
+|   |   |   |   |   |   |   proper_nouns > 1: 4 (2.0)
+|   |   |   |   |   |   commas > 0: 4 (5.0)
+|   |   |   |   first_person_pronouns > 2: 0 (7.0/2.0)
+|   |   |   adverbs > 0
+|   |   |   |   commas <= 1
+|   |   |   |   |   parentheses <= 0
+|   |   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   |   first_person_pronouns <= 3
+|   |   |   |   |   |   |   |   dashes <= 1
+|   |   |   |   |   |   |   |   |   adverbs <= 2
+|   |   |   |   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 9: 4 (21.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 9: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 0 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 2: 0 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   proper_nouns > 0
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas <= 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns <= 1: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   proper_nouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 12.5: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 12.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 2: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   future_tense_verbs > 0: 4 (2.0)
+|   |   |   |   |   |   |   |   |   adverbs > 2
+|   |   |   |   |   |   |   |   |   |   commas <= 0: 4 (22.0/4.0)
+|   |   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 8.666667: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 8.666667: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   dashes > 1
+|   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   ellipses <= 0
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns <= 1: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   first_person_pronouns > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 17.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 17.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len <= 19: 4 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   avg_sentence_len > 19: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   n_sentences > 1: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ellipses > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   commas > 0: 0 (5.0)
+|   |   |   |   |   |   |   first_person_pronouns > 3: 0 (8.0/1.0)
+|   |   |   |   |   |   wh_words > 0
+|   |   |   |   |   |   |   dashes <= 2
+|   |   |   |   |   |   |   |   all_upper_case_words <= 2
+|   |   |   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   |   |   dashes <= 1
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns <= 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   common_nouns > 3: 4 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   third_person_pronouns > 0: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dashes > 1
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (3.0)
+|   |   |   |   |   |   |   |   |   commas > 0
+|   |   |   |   |   |   |   |   |   |   n_sentences <= 2: 4 (3.0)
+|   |   |   |   |   |   |   |   |   |   n_sentences > 2: 0 (3.0)
+|   |   |   |   |   |   |   |   all_upper_case_words > 2: 4 (4.0)
+|   |   |   |   |   |   |   dashes > 2: 4 (3.0)
+|   |   |   |   |   parentheses > 0
+|   |   |   |   |   |   dashes <= 1
+|   |   |   |   |   |   |   proper_nouns <= 0
+|   |   |   |   |   |   |   |   all_upper_case_words <= 0
+|   |   |   |   |   |   |   |   |   avg_sentence_len <= 20: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   avg_sentence_len > 20: 4 (4.0)
+|   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (3.0/1.0)
+|   |   |   |   |   |   |   proper_nouns > 0: 4 (2.0)
+|   |   |   |   |   |   dashes > 1: 4 (2.0)
+|   |   |   |   commas > 1
+|   |   |   |   |   wh_words <= 0
+|   |   |   |   |   |   first_person_pronouns <= 2
+|   |   |   |   |   |   |   first_person_pronouns <= 1
+|   |   |   |   |   |   |   |   dashes <= 1
+|   |   |   |   |   |   |   |   |   all_upper_case_words <= 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   all_upper_case_words > 0: 4 (5.0/1.0)
+|   |   |   |   |   |   |   |   dashes > 1: 4 (3.0)
+|   |   |   |   |   |   |   first_person_pronouns > 1: 0 (4.0/1.0)
+|   |   |   |   |   |   first_person_pronouns > 2: 4 (4.0)
+|   |   |   |   |   wh_words > 0: 4 (2.0)
+|   |   second_person_pronouns > 0
+|   |   |   first_person_pronouns <= 1
+|   |   |   |   third_person_pronouns <= 1: 4 (49.0/8.0)
+|   |   |   |   third_person_pronouns > 1: 0 (3.0/1.0)
+|   |   |   first_person_pronouns > 1
+|   |   |   |   ellipses <= 0
+|   |   |   |   |   second_person_pronouns <= 2
+|   |   |   |   |   |   n_sentences <= 2
+|   |   |   |   |   |   |   commas <= 0
+|   |   |   |   |   |   |   |   n_sentences <= 1: 4 (6.0/1.0)
+|   |   |   |   |   |   |   |   n_sentences > 1
+|   |   |   |   |   |   |   |   |   common_nouns <= 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   common_nouns > 3: 4 (3.0)
+|   |   |   |   |   |   |   commas > 0: 0 (4.0)
+|   |   |   |   |   |   n_sentences > 2: 4 (5.0)
+|   |   |   |   |   second_person_pronouns > 2: 0 (4.0)
+|   |   |   |   ellipses > 0: 4 (4.0)
+
+Number of Leaves  : 	877
+
+Size of the tree : 	1753
+
+
+Time taken to build model: 1.79 seconds
+Time taken to test model on training data: 0.12 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        8684               78.9455 %
+Incorrectly Classified Instances      2316               21.0545 %
+Kappa statistic                          0.5789
+Mean absolute error                      0.3022
+Root mean squared error                  0.3887
+Relative absolute error                 60.4376 %
+Root relative squared error             77.7416 %
+Total Number of Instances            11000     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4347 1153 |    a = 0
+ 1163 4337 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         181               54.1916 %
+Incorrectly Classified Instances       153               45.8084 %
+Kappa statistic                          0.0847
+Mean absolute error                      0.4749
+Root mean squared error                  0.5737
+Relative absolute error                 94.9828 %
+Root relative squared error            114.7423 %
+Total Number of Instances              334     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  78  90 |   a = 0
+  63 103 |   b = 4
+
