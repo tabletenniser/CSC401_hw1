@@ -325,6 +325,5 @@ class Statistics:
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
-    print argv
     arff = Arff(*argv)
     arff.gen_arff()
