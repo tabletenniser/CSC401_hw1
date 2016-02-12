@@ -1,0 +1,169 @@
+
+Naive Bayes Classifier
+
+                              Class
+Attribute                         0       4
+                              (0.5)   (0.5)
+============================================
+first_person_pronouns
+  mean                        1.1351  0.6683
+  std. dev.                   1.1116  0.9205
+  weight sum                    3500    3500
+  precision                        1       1
+
+second_person_pronouns
+  mean                        0.2117  0.2831
+  std. dev.                   0.5303  0.5987
+  weight sum                    3500    3500
+  precision                        1       1
+
+third_person_pronouns
+  mean                        0.3686    0.29
+  std. dev.                    0.688   0.603
+  weight sum                    3500    3500
+  precision                        1       1
+
+coordinating_conjunctions
+  mean                        0.4223  0.4186
+  std. dev.                    0.679  0.6752
+  weight sum                    3500    3500
+  precision                        1       1
+
+past_tense_verbs
+  mean                         0.465  0.3151
+  std. dev.                   0.8377  0.6973
+  weight sum                    3500    3500
+  precision                   1.1429  1.1429
+
+future_tense_verbs
+  mean                        0.0631  0.0729
+  std. dev.                   0.2569  0.2749
+  weight sum                    3500    3500
+  precision                        1       1
+
+commas
+  mean                        0.2877  0.3801
+  std. dev.                    0.656  0.7544
+  weight sum                    3500    3500
+  precision                   1.1429  1.1429
+
+colons_and_semicolons
+  mean                        0.1486  0.1773
+  std. dev.                   0.5518  0.5766
+  weight sum                    3500    3500
+  precision                   1.1429  1.1429
+
+dashes
+  mean                        0.0723  0.1437
+  std. dev.                   0.3623  0.4996
+  weight sum                    3500    3500
+  precision                   1.1667  1.1667
+
+parentheses
+  mean                        0.0394  0.0709
+  std. dev.                   0.3333  0.3849
+  weight sum                    3500    3500
+  precision                        2       2
+
+ellipses
+  mean                        0.2624  0.1681
+  std. dev.                   0.6125  0.4884
+  weight sum                    3500    3500
+  precision                    1.375   1.375
+
+common_nouns
+  mean                        3.7243  4.0166
+  std. dev.                   2.4854  2.4363
+  weight sum                    3500    3500
+  precision                        1       1
+
+proper_nouns
+  mean                         0.294  0.3889
+  std. dev.                    0.718  0.7852
+  weight sum                    3500    3500
+  precision                        1       1
+
+adverbs
+  mean                        1.1203  0.8883
+  std. dev.                    1.144  1.0769
+  weight sum                    3500    3500
+  precision                        1       1
+
+wh_words
+  mean                        0.1369  0.1123
+  std. dev.                   0.3778  0.3384
+  weight sum                    3500    3500
+  precision                        1       1
+
+modern_slang_acroynms
+  mean                             0       0
+  std. dev.                   0.0017  0.0017
+  weight sum                    3500    3500
+  precision                     0.01    0.01
+
+all_upper_case_words
+  mean                        0.7028  0.5821
+  std. dev.                   1.4557  1.0702
+  weight sum                    3500    3500
+  precision                   1.3889  1.3889
+
+avg_sentence_len
+  mean                        9.8412  9.3823
+  std. dev.                   5.5424  5.4574
+  weight sum                    3500    3500
+  precision                   0.3398  0.3398
+
+avg_token_len
+  mean                        4.3165  4.6265
+  std. dev.                   1.2059  1.1509
+  weight sum                    3500    3500
+  precision                   0.0591  0.0591
+
+n_sentences
+  mean                         1.716  1.7026
+  std. dev.                   0.8995  0.9161
+  weight sum                    3500    3500
+  precision                        1       1
+
+
+
+Time taken to build model: 0.1 seconds
+Time taken to test model on training data: 0.31 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        4288               61.2571 %
+Incorrectly Classified Instances      2712               38.7429 %
+Kappa statistic                          0.2251
+Mean absolute error                      0.4317
+Root mean squared error                  0.4982
+Relative absolute error                 86.3494 %
+Root relative squared error             99.6346 %
+Total Number of Instances             7000     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1654 1846 |    a = 0
+  866 2634 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         190               52.9248 %
+Incorrectly Classified Instances       169               47.0752 %
+Kappa statistic                          0.0518
+Mean absolute error                      0.4825
+Root mean squared error                  0.5603
+Relative absolute error                 96.4972 %
+Root relative squared error            112.0562 %
+Total Number of Instances              359     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  48 129 |   a = 0
+  40 142 |   b = 4
+
