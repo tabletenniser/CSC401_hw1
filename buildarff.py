@@ -2,11 +2,6 @@ import sys
 import re
 import logging
 
-"""
-TODO: The doc is too fucking vague, how do i count punctuations?
-      Punctuation as a token or within a token?
-"""
-
 class Arff:
     TAG_REGEX = "^<A=(\d)>$"
     LOG_FILE = "buildarff.log"
@@ -46,7 +41,7 @@ class Arff:
                     limits[tclass] = 1
                     if len(limits) > 2:
                         raise ValueError("Not expecting > 2 classes")
-                elif self.max_tweet != 0 and limits[tclass] > self.max_tweet:
+                elif self.max_tweet != 0 and limits[tclass] >= self.max_tweet:
                     skip_til_next_header = True
                     continue
                 else:
