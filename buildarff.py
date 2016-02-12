@@ -229,6 +229,12 @@ class Statistics:
         # modern slang
         elif word.lower() in self.list_modern_slang:
             self.stats["modern_slang_acroynms"] += 1
+        # coordinating conjunctions
+        elif word.lower() in self.coordinating_conjunctions:
+            self.stats["coordinating_conjunctions"] += 1
+        # past tense verbs
+        elif tag == "VBD":
+            self.stats["past_tense_verbs"] += 1
 
         # punctuation stats:
         self.stats["commas"] += word.count(",")
@@ -296,6 +302,7 @@ class Statistics:
         self.list_adverb_tag = ["RB", "RBR", "RBS"]
         self.list_wh_words_tag = ["WDT", "WP", "WP$", "WRB"]
         self.list_punctuations = "?!,;:-.\"'"
+        self.coordinating_conjunctions = ['for', 'and', 'nor', 'but', 'or', 'yet', 'so']
 
     def clear_stats(self):
         self.stats = self.new_stats()
