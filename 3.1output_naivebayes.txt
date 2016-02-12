@@ -24,16 +24,16 @@ third_person_pronouns
   precision                        1       1
 
 coordinating_conjunctions
-  mean                             0       0
-  std. dev.                   0.0017  0.0017
+  mean                        0.4184  0.4155
+  std. dev.                   0.6729  0.6766
   weight sum                    5500    5500
-  precision                     0.01    0.01
+  precision                        1       1
 
 past_tense_verbs
-  mean                             0       0
-  std. dev.                   0.0017  0.0017
+  mean                        0.4738  0.3109
+  std. dev.                   0.8453  0.6883
   weight sum                    5500    5500
-  precision                     0.01    0.01
+  precision                   1.1429  1.1429
 
 future_tense_verbs
   mean                        0.0636  0.0675
@@ -127,43 +127,43 @@ n_sentences
 
 
 
-Time taken to build model: 0.18 seconds
-Time taken to test model on training data: 0.33 seconds
+Time taken to build model: 0.14 seconds
+Time taken to test model on training data: 0.48 seconds
 
 === Error on training data ===
 
-Correctly Classified Instances        6723               61.1182 %
-Incorrectly Classified Instances      4277               38.8818 %
-Kappa statistic                          0.2224
-Mean absolute error                      0.4381
-Root mean squared error                  0.4986
-Relative absolute error                 87.6143 %
-Root relative squared error             99.7193 %
+Correctly Classified Instances        6722               61.1091 %
+Incorrectly Classified Instances      4278               38.8909 %
+Kappa statistic                          0.2222
+Mean absolute error                      0.433 
+Root mean squared error                  0.5022
+Relative absolute error                 86.6042 %
+Root relative squared error            100.4397 %
 Total Number of Instances            11000     
 
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 2794 2706 |    a = 0
- 1571 3929 |    b = 4
+ 2659 2841 |    a = 0
+ 1437 4063 |    b = 4
 
 
 === Error on test data ===
 
-Correctly Classified Instances         182               54.491  %
-Incorrectly Classified Instances       152               45.509  %
-Kappa statistic                          0.0922
-Mean absolute error                      0.4787
-Root mean squared error                  0.5445
-Relative absolute error                 95.7319 %
-Root relative squared error            108.9051 %
-Total Number of Instances              334     
+Correctly Classified Instances         194               54.039  %
+Incorrectly Classified Instances       165               45.961  %
+Kappa statistic                          0.0746
+Mean absolute error                      0.4804
+Root mean squared error                  0.5531
+Relative absolute error                 96.0745 %
+Root relative squared error            110.614  %
+Total Number of Instances              359     
 
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
-  55 113 |   a = 0
-  39 127 |   b = 4
+  53 124 |   a = 0
+  41 141 |   b = 4
 

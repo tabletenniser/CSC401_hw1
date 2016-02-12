@@ -10,66 +10,68 @@ BinarySMO
 
 Machine linear: showing attribute weights, not support vectors.
 
-        -4.8816 * (normalized) first_person_pronouns
- +       1.6594 * (normalized) second_person_pronouns
- +      -0.5833 * (normalized) third_person_pronouns
- +       0.6096 * (normalized) future_tense_verbs
- +       2.2308 * (normalized) commas
- +      -0.3581 * (normalized) colons_and_semicolons
- +       1.6897 * (normalized) dashes
- +       1.2346 * (normalized) parentheses
- +      -3.3066 * (normalized) ellipses
- +       1.7897 * (normalized) common_nouns
- +       1.033  * (normalized) proper_nouns
- +      -2.1916 * (normalized) adverbs
- +      -0.3134 * (normalized) wh_words
- +      -2.1043 * (normalized) all_upper_case_words
- +       0.1244 * (normalized) avg_sentence_len
- +       6.1792 * (normalized) avg_token_len
- +       0.5046 * (normalized) n_sentences
- +       0.017 
+        -4.5992 * (normalized) first_person_pronouns
+ +       1.6229 * (normalized) second_person_pronouns
+ +      -0.4516 * (normalized) third_person_pronouns
+ +       0.4296 * (normalized) coordinating_conjunctions
+ +      -1.9345 * (normalized) past_tense_verbs
+ +       0.5458 * (normalized) future_tense_verbs
+ +       2.3298 * (normalized) commas
+ +      -0.3609 * (normalized) colons_and_semicolons
+ +       1.6418 * (normalized) dashes
+ +       1.1671 * (normalized) parentheses
+ +      -3.1772 * (normalized) ellipses
+ +       1.6443 * (normalized) common_nouns
+ +       1.032  * (normalized) proper_nouns
+ +      -2.2531 * (normalized) adverbs
+ +      -0.2234 * (normalized) wh_words
+ +      -2.0542 * (normalized) all_upper_case_words
+ +       0.1979 * (normalized) avg_sentence_len
+ +       6.2421 * (normalized) avg_token_len
+ +       0.6661 * (normalized) n_sentences
+ +       0.0097
 
-Number of kernel evaluations: 3108996 (62.454% cached)
+Number of kernel evaluations: 3724036 (62.301% cached)
 
 
 
-Time taken to build model: 1.6 seconds
-Time taken to test model on training data: 0.1 seconds
+Time taken to build model: 2.15 seconds
+Time taken to test model on training data: 0.24 seconds
 
 === Error on training data ===
 
-Correctly Classified Instances        6946               63.1455 %
-Incorrectly Classified Instances      4054               36.8545 %
-Kappa statistic                          0.2629
-Mean absolute error                      0.3685
-Root mean squared error                  0.6071
-Relative absolute error                 73.7091 %
-Root relative squared error            121.4159 %
+Correctly Classified Instances        7002               63.6545 %
+Incorrectly Classified Instances      3998               36.3455 %
+Kappa statistic                          0.2731
+Mean absolute error                      0.3635
+Root mean squared error                  0.6029
+Relative absolute error                 72.6909 %
+Root relative squared error            120.5744 %
 Total Number of Instances            11000     
 
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 3035 2465 |    a = 0
- 1589 3911 |    b = 4
+ 3087 2413 |    a = 0
+ 1585 3915 |    b = 4
 
 
 === Error on test data ===
 
-Correctly Classified Instances         172               51.497  %
-Incorrectly Classified Instances       162               48.503  %
-Kappa statistic                          0.0321
-Mean absolute error                      0.485 
-Root mean squared error                  0.6964
-Relative absolute error                 97.006  %
-Root relative squared error            139.2882 %
-Total Number of Instances              334     
+Correctly Classified Instances         186               51.8106 %
+Incorrectly Classified Instances       173               48.1894 %
+Kappa statistic                          0.0305
+Mean absolute error                      0.4819
+Root mean squared error                  0.6942
+Relative absolute error                 96.3788 %
+Root relative squared error            138.8372 %
+Total Number of Instances              359     
 
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
-  55 113 |   a = 0
-  49 117 |   b = 4
+  54 123 |   a = 0
+  50 132 |   b = 4
 
