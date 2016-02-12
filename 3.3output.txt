@@ -1,0 +1,39 @@
+The rank for feature importance vs. the size of the training set is summarized below (on Naive Bayes classifier):
+training size n=500: 1,19,5,12,11,17,10,4,6,18,20,3,2,15,13,14,8,7,16,9
+training size n=1000: 1,19,14,5,11,17,9,12,13,10,2,7,4,20,3,16,15,18,8,6
+training size n=1500: 1,19,5,14,9,11,2,13,12,7,10,3,4,20,18,8,15,17,16,6
+training size n=2000: 1,19,14,9,12,5,11,2,7,13,10,3,4,20,18,8,15,17,16,6
+training size n=2500: 1,19,14,9,5,2,11,13,7,12,18,10,3,4,20,17,15,8,16,6
+training size n=3000: 1,19,14,5,9,11,7,2,13,12,3,18,10,16,20,17,6,8,4,15
+training size n=3500: 1,19,14,5,9,11,13,7,2,12,3,18,10,17,16,20,6,8,4,15
+training size n=4000: 1,19,14,5,9,11,13,2,12,7,18,3,10,17,15,16,20,8,4,6
+training size n=4500: 1,19,14,5,9,11,13,2,12,3,7,18,10,16,20,17,6,8,4,15
+training size n=5000: 1,19,14,5,9,11,13,2,12,7,3,18,10,16,20,17,6,8,4,15
+training size n=5500: 1,19,14,5,2,11,9,13,12,3,7,18,10,15,16,20,17,8,4,6
+
+Note: 
+- The size of the training set n is the size of class 0 training data which is the same as the size of class 4 training data. So, for n=500, we have 1000 training examples (500 for class 0 and 500 for class 4)
+- The mapping betwwen feature index and feature name is listed below:
+Ranked attributes:
+ 0.037936    1 first_person_pronouns
+ 0.022771   19 avg_token_len
+ 0.015309   14 adverbs
+ 0.008796    5 past_tense_verbs
+ 0.004424    2 second_person_pronouns
+ 0.004387   11 ellipses
+ 0.004062    9 dashes
+ 0.003626   13 proper_nouns
+ 0.003224   12 common_nouns
+ 0.002494    3 third_person_pronouns
+ 0.002358    7 commas
+ 0.002009   18 avg_sentence_len
+ 0.0009     10 parentheses
+ 0.000694   15 wh_words
+ 0          16 modern_slang_acroynms
+ 0          20 n_sentences
+ 0          17 all_upper_case_words
+ 0           8 colons_and_semicolons
+ 0           4 coordinating_conjunctions
+ 0           6 future_tense_verbs
+
+ As it can be seen from the data, features like number_of_first_person_pronouns, average_token_length and number_of_adverbs remain as important features regardless the size of the training data. If we look at the coefficients for the linear decision boundary from SVM in part 1, it can be seen that first_person_pronouns has negative coefficient of -4.5992 and avg_token_len has a positive coefficient of 6.2421. This means that if there are first_person_pronouns in the tweet, it's more likely to be a negative emotion and a longer tweet is more likely to associate with a positive emotion. Their consistency among training set of different sizes indicates that they are relatively a genuine feature of this classification task. On the other hand, features like future_tense_verbs and all_upper_case_words provide no information gain to the classifier. This is verified, for example, there are no words that are all capital letters in both the training and test dataset and it's expected that this feature provides absolutely no info to the classifier. A possible improvement would be to remove those features from the training and test data to get less noise to the classifier.
