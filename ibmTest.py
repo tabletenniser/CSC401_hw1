@@ -121,7 +121,7 @@ def classify_single_text(username,password,classifier_id,text):
             classifiers_as_json = r.json()
             result['classes'] = classifiers_as_json['classes']
             result['top_class'] = classifiers_as_json['top_class']
-            # print classifiers_as_json['classes']
+            print classifiers_as_json['classes']
         except Exception:
             print "Error sending POST request."
             raise
@@ -165,6 +165,7 @@ def classify_all_texts(username,password,input_csv_name):
 	#	or if the input csv file is of an improper format.
 	#
         classifier_id_list = get_classifier_ids(username, password)
+        print classifier_id_list
         TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
 
         result = dict()
@@ -226,19 +227,19 @@ def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
         correct_label = 0
         with codecs.open(input_csv_file_name, "r", 'latin-1') as f:
             for line in f:
-                total_count += 1
                 tweet_match = re.match(TWEET_REGEX, line)
                 try:
                     tclass, tid, date, query, user, text = tweet_match.groups()
                 except Exception as e:
                     print "Unable to parse tweet " + line
                     continue
-                print 'total_count', total_count
-                print 'size of classifier_dict', len(classifier_dict)
-                print 'classifier_dict[total_count]["top_class"]', classifier_dict[total_count]['top_class']
-                print 'tclass', tclass
+                # print 'total_count', total_count
+                # print 'size of classifier_dict', len(classifier_dict)
+                # print 'classifier_dict[total_count]["top_class"]', classifier_dict[total_count]['top_class']
+                # print 'tclass', tclass
                 if classifier_dict[total_count]['top_class'] == tclass:
                     correct_label +=1
+                total_count += 1
 
 	return correct_label*1.0/total_count
 
@@ -281,9 +282,9 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
 
         correct_label_confidences = []
         incorrect_label_confidences = []
+        total_count = 0
         with codecs.open(input_csv_file_name, "r", 'latin-1') as f:
             for line in f:
-                total_count += 1
                 tweet_match = re.match(TWEET_REGEX, line)
                 try:
                     tclass, tid, date, query, user, text = tweet_match.groups()
@@ -293,6 +294,9 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
                 # Case for correct labeling
                 if classifier_dict[total_count]['top_class'] == tclass:
                     correct_label_confidences.append(classifier_dict[total_count]['classes'][0]['confidence'])
+                else:
+                    incorrect_label_confidences.append(classifier_dict[total_count]['classes'][0]['confidence'])
+                total_count += 1
 
         correct_label_conf_average = 1.0*sum(correct_label_confidences)/len(correct_label_confidences)
         incorrect_label_conf_average = 1.0*sum(incorrect_label_confidences)/len(incorrect_label_confidences)
@@ -303,22 +307,23 @@ if __name__ == "__main__":
 	#STEP 1: Ensure all 11 classifiers are ready for testing
 	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
 	password = 'WKW85r9ZVwuf'
-        classifier_ids = get_classifier_ids(username, password)
-        print "classifier_ids", classifier_ids
-        assert_all_classifiers_are_available(username, password, classifier_ids)
+        # classifier_ids = get_classifier_ids(username, password)
+        # print "classifier_ids", classifier_ids
+        # assert_all_classifiers_are_available(username, password, classifier_ids)
 
 	#STEP 2: Test the test data on all classifiers
-        classifier_predictions = classify_all_texts(username, password, input_test_data)
-        print 'len(classifier_predictions)', len(classifier_predictions)
-        print 'len(classifier_predictions[0])', len(classifier_predictions[0])
-        print 'len(classifier_predictions[1])', len(classifier_predictions[1])
-        print 'len(classifier_predictions[2])', len(classifier_predictions[2])
+        # classifier_predictions = classify_all_texts(username, password, input_test_data)
 
         import pickle
-        with open('filename.pickle', 'wb') as handle:
-            pickle.dump(classifier_predictions, handle)
-        # with open('filename.pickle', 'rb') as handle:
-        #     b = pickle.load(handle)
+        # with open('filename.pickle', 'wb') as handle:
+        #     pickle.dump(classifier_predictions, handle)
+        with open('filename.pickle', 'rb') as handle:
+            classifier_predictions = pickle.load(handle)
+        print classifier_predictions.keys()
+        print 'len(classifier_predictions)', len(classifier_predictions)
+        print 'len(classifier_predictions[0])', len(classifier_predictions['c7fa4ax22-nlc-337'])
+        print 'len(classifier_predictions[1])', len(classifier_predictions['c7fa49x23-nlc-323'])
+        print 'len(classifier_predictions[2])', len(classifier_predictions['c7e487x21-nlc-384'])
 
 	#STEP 3: Compute the accuracy for each classifier
         for cls_name in classifier_predictions:
