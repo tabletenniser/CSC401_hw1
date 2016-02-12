@@ -12,6 +12,9 @@
 #		You may also find it helpful to reuse some of your functions from ibmTrain.py.
 import os
 import requests
+import json
+import re
+import codecs
 
 def get_classifier_ids(username,password):
 	# Retrieves a list of classifier ids from a NLClassifier service
@@ -32,17 +35,22 @@ def get_classifier_ids(username,password):
         try:
             url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers'
             r = requests.get(url, auth=(username, password))
-            print r.status_code
-            print r.text
-            print r.headers['content-type']
-            print r.json()
+            if r.status_code == 200:
+                classifiers_as_json = r.json()
+            # print 'status_code', r.status_code
+            # print 'content-type', r.headers['content-type']
+            # print classifiers_as_json['classifiers']
+            list_of_classifier_ids = []
+            for cls in classifiers_as_json['classifiers']:
+                # print cls['classifier_id']
+                list_of_classifier_ids.append(cls['classifier_id'])
+                # cmd = 'curl -u %s:%s "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password)
+                # os.system(cmd)
+        except Exception:
+            print "Error sending POST request."
+            raise
 
-            # cmd = 'curl -u %s:%s "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password)
-            # os.system(cmd)
-        except Exception as e:
-            raise e
-
-	return
+	return list_of_classifier_ids
 
 
 def assert_all_classifiers_are_available(username, password, classifier_id_list):
@@ -61,9 +69,18 @@ def assert_all_classifiers_are_available(username, password, classifier_id_list)
 	# Error Handling:
 	#	This function should throw an exception if the classifiers call fails for any reason AND
 	#	It should throw an error if any classifier is NOT 'Available'
-	#
-
-	#TODO: Fill in this function
+        try:
+            for cid in classifier_id_list:
+                url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/'+str(cid)
+                r = requests.get(url, auth=(username, password))
+                if r.status_code != 200:
+                    raise Exception('Status code from REQUEST is not 200!!!')
+                classifiers_as_json = r.json()
+                if classifiers_as_json['status'] != 'Available':
+                    raise Exception('Job is not available!')
+        except Exception:
+            print "Error sending POST request."
+            raise
 
 	return
 
@@ -94,11 +111,22 @@ def classify_single_text(username,password,classifier_id,text):
 	#
 	# Error Handling:
 	#	This function should throw an exception if the classify call fails for any reason
-	#
+        result = dict()
+        try:
+            payload = {'text': text}
+            url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/'+str(classifier_id)+'/classify'
+            r = requests.get(url, auth=(username, password), params=payload)
+            if r.status_code != 200:
+                raise Exception('Status code from REQUEST is not 200!!!')
+            classifiers_as_json = r.json()
+            result['classes'] = classifiers_as_json['classes']
+            result['top_class'] = classifiers_as_json['top_class']
+            # print classifiers_as_json['classes']
+        except Exception:
+            print "Error sending POST request."
+            raise
 
-	#TODO: Fill in this function
-
-	return
+	return result
 
 def classify_all_texts(username,password,input_csv_name):
 	# Classifies all texts in an input csv file using all classifiers for a given NLClassifier
@@ -119,6 +147,7 @@ def classify_all_texts(username,password,input_csv_name):
 	#	and the confidences of all the possible classes (ie the same
 	#	format as returned by classify_single_text)
 	#	Format example:
+        #       [
 	#		[
 	#			{'top_class': 'class_name',
 	#		 	 'classes': [
@@ -130,15 +159,31 @@ def classify_all_texts(username,password,input_csv_name):
 	#			...
 	#			}
 	#		]
-	#
+	#       ]
 	# Error Handling:
 	#	This function should throw an exception if the classify call fails for any reason
 	#	or if the input csv file is of an improper format.
 	#
+        classifier_id_list = get_classifier_ids(username, password)
+        TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
 
-	#TODO: Fill in this function
+        result = dict()
+        for cls_id in classifier_id_list:
+            classifier_result = []
+            with codecs.open(input_csv_name, "r", 'latin-1') as f:
+                for line in f:
+                    tweet_match = re.match(TWEET_REGEX, line)
+                    try:
+                        tclass, tid, date, query, user, text = tweet_match.groups()
+                    except Exception as e:
+                        print "Unable to parse tweet " + line
+                        continue
+                    text = text.replace('"', '')
+                    text = text.replace('\t', '')
+                    classifier_result.append(classify_single_text(username, password, cls_id, text))
+            result[cls_id] = classifier_result
 
-	return
+	return result
 
 
 def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
@@ -175,10 +220,27 @@ def compute_accuracy_of_single_classifier(classifier_dict, input_csv_file_name):
 	# 	This function should throw an error if there is an issue with the
 	#	inputs.
 	#
+        TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
 
-	#TODO: fill in this function
+        total_count = 0
+        correct_label = 0
+        with codecs.open(input_csv_file_name, "r", 'latin-1') as f:
+            for line in f:
+                total_count += 1
+                tweet_match = re.match(TWEET_REGEX, line)
+                try:
+                    tclass, tid, date, query, user, text = tweet_match.groups()
+                except Exception as e:
+                    print "Unable to parse tweet " + line
+                    continue
+                print 'total_count', total_count
+                print 'size of classifier_dict', len(classifier_dict)
+                print 'classifier_dict[total_count]["top_class"]', classifier_dict[total_count]['top_class']
+                print 'tclass', tclass
+                if classifier_dict[total_count]['top_class'] == tclass:
+                    correct_label +=1
 
-	return
+	return correct_label*1.0/total_count
 
 def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_file_name):
 	# Given a list of "classifications" for a given classifier, compute the average
@@ -215,25 +277,56 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
 	# 	This function should throw an error if there is an issue with the
 	#	inputs.
 	#
+        TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
 
-	#TODO: fill in this function
+        correct_label_confidences = []
+        incorrect_label_confidences = []
+        with codecs.open(input_csv_file_name, "r", 'latin-1') as f:
+            for line in f:
+                total_count += 1
+                tweet_match = re.match(TWEET_REGEX, line)
+                try:
+                    tclass, tid, date, query, user, text = tweet_match.groups()
+                except Exception as e:
+                    print "Unable to parse tweet " + line
+                    continue
+                # Case for correct labeling
+                if classifier_dict[total_count]['top_class'] == tclass:
+                    correct_label_confidences.append(classifier_dict[total_count]['classes'][0]['confidence'])
 
-	return
-
+        correct_label_conf_average = 1.0*sum(correct_label_confidences)/len(correct_label_confidences)
+        incorrect_label_conf_average = 1.0*sum(incorrect_label_confidences)/len(incorrect_label_confidences)
+	return correct_label_conf_average, incorrect_label_conf_average
 
 if __name__ == "__main__":
-
-	input_test_data = '<ADD FILE NAME HERE>'
-
+	input_test_data = 'testdata.manualSUBSET.2009.06.14.csv'
 	#STEP 1: Ensure all 11 classifiers are ready for testing
 	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
 	password = 'WKW85r9ZVwuf'
-        get_classifier_ids(username, password)
+        classifier_ids = get_classifier_ids(username, password)
+        print "classifier_ids", classifier_ids
+        assert_all_classifiers_are_available(username, password, classifier_ids)
 
 	#STEP 2: Test the test data on all classifiers
+        classifier_predictions = classify_all_texts(username, password, input_test_data)
+        print 'len(classifier_predictions)', len(classifier_predictions)
+        print 'len(classifier_predictions[0])', len(classifier_predictions[0])
+        print 'len(classifier_predictions[1])', len(classifier_predictions[1])
+        print 'len(classifier_predictions[2])', len(classifier_predictions[2])
+
+        import pickle
+        with open('filename.pickle', 'wb') as handle:
+            pickle.dump(classifier_predictions, handle)
+        # with open('filename.pickle', 'rb') as handle:
+        #     b = pickle.load(handle)
 
 	#STEP 3: Compute the accuracy for each classifier
+        for cls_name in classifier_predictions:
+            print cls_name
+            print compute_accuracy_of_single_classifier(classifier_predictions[cls_name], input_test_data)
 
 	#STEP 4: Compute the confidence of each class for each classifier
-
+        for cls_name in classifier_predictions:
+            print cls_name
+            print compute_average_confidence_of_single_classifier(classifier_predictions[cls_name], input_test_data)
 

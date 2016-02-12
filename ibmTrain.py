@@ -31,7 +31,7 @@ def convert_training_csv_to_watson_csv_format(input_csv_name, group_id, output_c
 	# Returns:
 	#	None
 	
-        TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"([^\"]+)\",\"([^\"]+)\",\"(.+)\"$'
+        TWEET_REGEX = '^\"(\d)\",\"(\d+)\",\"([^\"]+)\",\"(.+)\",\"([^\"]+)\",\"(.+)\"$'
 
         class_0_lb = group_id * 5500
         class_0_ub = (group_id + 1) * 5500 - 1
