@@ -1,3 +1,4 @@
+import sys
 import logging
 import re
 import hashlib
@@ -324,8 +325,15 @@ class TweetTokenizer:
         return texts
 
 if __name__ == "__main__":
-    twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train_gid55.twt", parse_all=False)
+    argv = sys.argv[1:]
+    if (len(argv) == 3):
+        argv.append(False)
+        twt = TweetTokenizer(*argv)
+    else:
+        argv[-1] = True
+        twt = TweetTokenizer(*argv)
     twt.parse_tweet()
 
-    twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", 55, "test.twt", parse_all=True)
-    twt.parse_tweet()
+    #twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train_gid55.twt", parse_all=False)
+    #twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", 55, "test.twt", parse_all=True)
+    #twt.parse_tweet()
