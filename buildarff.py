@@ -1,3 +1,4 @@
+import sys
 import re
 import logging
 
@@ -10,10 +11,10 @@ class Arff:
     TAG_REGEX = "^<A=(\d)>$"
     LOG_FILE = "buildarff.log"
 
-    def __init__(self, input_fn, output_fn, max_tweet):
+    def __init__(self, input_fn, output_fn, max_tweet=0):
         self.input_fn = input_fn
         self.output_fn = output_fn
-        self.max_tweet = max_tweet
+        self.max_tweet = int(max_tweet)
         # set up logging
         logging.basicConfig(
                 level=logging.DEBUG,
@@ -31,19 +32,32 @@ class Arff:
 
     def gen_arff(self):
         tag_matcher = re.compile(Arff.TAG_REGEX)
-        nheaders = 0
+        limits = dict()
+        skip_til_next_header = False
         for line in self.input_file():
             # check if the line read is a tag
+            self.logger.info("Matching line " + line.strip())
             match = tag_matcher.match(line)
             if match:
+                skip_til_next_header = False
                 # header =>
-                nheaders += 1
-                self.stats.feed_header(match.group(1))
+                tclass = match.group(1)
+                if tclass not in limits:
+                    limits[tclass] = 1
+                    if len(limits) > 2:
+                        raise ValueError("Not expecting > 2 classes")
+                elif self.max_tweet != 0 and limits[tclass] > self.max_tweet:
+                    skip_til_next_header = True
+                    continue
+                else:
+                    limits[tclass] += 1
+
+                self.stats.feed_header(tclass)
             else:
-                self.stats.feed_line(line)
+                if not skip_til_next_header:
+                    self.stats.feed_line(line)
         self.stats.print_stats()
-        self.logger.info("Processed " + str(self.stats.ntweets) + " tweets")
-        self.logger.info("Processed " + str(nheaders) + " headers")
+        self.logger.info("Processed " + str(limits))
 
 
 class Statistics:
@@ -229,6 +243,12 @@ class Statistics:
         # modern slang
         elif word.lower() in self.list_modern_slang:
             self.stats["modern_slang_acroynms"] += 1
+        # coordinating conjunctions
+        elif word.lower() in self.coordinating_conjunctions:
+            self.stats["coordinating_conjunctions"] += 1
+        # past tense verbs
+        elif tag == "VBD":
+            self.stats["past_tense_verbs"] += 1
 
         # punctuation stats:
         self.stats["commas"] += word.count(",")
@@ -239,13 +259,15 @@ class Statistics:
 
         # a mini FSM to recognize going+to+VB
         if word.lower() == "going" and self.going_to_VB == 0:
+            self.logger.debug("Future tense vb at " + word)
             self.going_to_VB += 1
         elif word.lower() == "to" and self.going_to_VB == 1:
+            self.logger.debug("Future tense vb at " + word)
             self.going_to_VB += 1
         elif tag  == "VB" and self.going_to_VB == 2:
             self.going_to_VB = 0
             self.stats["future_tense_verbs"] += 1
-            self.logger.debug("Matched future tense vb at verb" + word)
+            self.logger.debug("Matched future tense vb at verb " + word)
         else:
             self.going_to_VB = 0
 
@@ -296,14 +318,13 @@ class Statistics:
         self.list_adverb_tag = ["RB", "RBR", "RBS"]
         self.list_wh_words_tag = ["WDT", "WP", "WP$", "WRB"]
         self.list_punctuations = "?!,;:-.\"'"
+        self.coordinating_conjunctions = ['for', 'and', 'nor', 'but', 'or', 'yet', 'so']
 
     def clear_stats(self):
         self.stats = self.new_stats()
 
 if __name__ == "__main__":
-    arff = Arff("test.twt", "test.arff")
-    arff.gen_arff()
-
-    # arff = Arff("train_gid55.twt", "train_gid55.arff")
-    arff = Arff("train_gid55.twt", "train_gid55.arff", 500)
+    argv = sys.argv[1:]
+    print argv
+    arff = Arff(*argv)
     arff.gen_arff()
