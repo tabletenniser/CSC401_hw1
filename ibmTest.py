@@ -297,7 +297,9 @@ def compute_average_confidence_of_single_classifier(classifier_dict, input_csv_f
 	return correct_label_conf_average, incorrect_label_conf_average
 
 if __name__ == "__main__":
-	input_test_data = 'testdata.manualSUBSET.2009.06.14.csv'
+	# input_test_data = 'testdata.manualSUBSET.2009.06.14.csv'
+	input_test_data = '/u/cs401/A1/tweets/testdata.manualSUBSET.2009.06.14.csv'
+
 	#STEP 1: Ensure all 11 classifiers are ready for testing
 	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
 	password = 'WKW85r9ZVwuf'
@@ -308,9 +310,9 @@ if __name__ == "__main__":
 	#STEP 2: Test the test data on all classifiers
         classifier_predictions = classify_all_texts(username, password, input_test_data)
 
-        # import pickle
-        # with open('filename.pickle', 'wb') as handle:
-        #     pickle.dump(classifier_predictions, handle)
+        import pickle
+        with open('filename.pickle', 'wb') as handle:
+            pickle.dump(classifier_predictions, handle)
         # with open('filename.pickle', 'rb') as handle:
         #     classifier_predictions = pickle.load(handle)
         # print classifier_predictions.keys()
