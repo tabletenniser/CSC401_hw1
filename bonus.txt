@@ -1,0 +1,6 @@
+We explored the following methods to futher improve test classification rate on WEKA
+
+1- Additional Features
+    1.1- Happy / Sad words
+
+2- Regularization
