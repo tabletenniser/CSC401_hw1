@@ -1,0 +1,770 @@
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv1_train.arff -T 3.4_cv1_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.668  * (normalized) first_person_pronouns
+ +       1.602  * (normalized) second_person_pronouns
+ +      -0.6481 * (normalized) third_person_pronouns
+ +       0.3888 * (normalized) coordinating_conjunctions
+ +      -1.3905 * (normalized) past_tense_verbs
+ +       0.493  * (normalized) future_tense_verbs
+ +       1.6143 * (normalized) commas
+ +      -0.3397 * (normalized) colons_and_semicolons
+ +       1.4593 * (normalized) dashes
+ +       1      * (normalized) parentheses
+ +      -3.1341 * (normalized) ellipses
+ +       1.5225 * (normalized) common_nouns
+ +       0.8753 * (normalized) proper_nouns
+ +      -2.38   * (normalized) adverbs
+ +      -0.2275 * (normalized) wh_words
+ +      -1.7846 * (normalized) all_upper_case_words
+ +       0.4352 * (normalized) avg_sentence_len
+ +       6.0718 * (normalized) avg_token_len
+ +       0.8801 * (normalized) n_sentences
+ +       0.017 
+
+Number of kernel evaluations: 3177831 (62.362% cached)
+
+
+
+Time taken to build model: 1.74 seconds
+Time taken to test model on training data: 0.08 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6270               63.3333 %
+Incorrectly Classified Instances      3630               36.6667 %
+Kappa statistic                          0.2667
+Mean absolute error                      0.3667
+Root mean squared error                  0.6055
+Relative absolute error                 73.3333 %
+Root relative squared error            121.106  %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2752 2198 |    a = 0
+ 1432 3518 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         721               65.5455 %
+Incorrectly Classified Instances       379               34.4545 %
+Kappa statistic                          0.3109
+Mean absolute error                      0.3445
+Root mean squared error                  0.587 
+Relative absolute error                 68.9091 %
+Root relative squared error            117.396  %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 315 235 |   a = 0
+ 144 406 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv2_train.arff -T 3.4_cv2_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.5913 * (normalized) first_person_pronouns
+ +       1.4229 * (normalized) second_person_pronouns
+ +      -0.4999 * (normalized) third_person_pronouns
+ +       0.3716 * (normalized) coordinating_conjunctions
+ +      -1.9328 * (normalized) past_tense_verbs
+ +       0.5627 * (normalized) future_tense_verbs
+ +       2.3004 * (normalized) commas
+ +      -0.3    * (normalized) colons_and_semicolons
+ +       1.5071 * (normalized) dashes
+ +       1.0612 * (normalized) parentheses
+ +      -3.3209 * (normalized) ellipses
+ +       1.4586 * (normalized) common_nouns
+ +       0.8953 * (normalized) proper_nouns
+ +      -2.3088 * (normalized) adverbs
+ +      -0.1937 * (normalized) wh_words
+ +      -1.8236 * (normalized) all_upper_case_words
+ +       0.251  * (normalized) avg_sentence_len
+ +       5.8426 * (normalized) avg_token_len
+ +       0.7685 * (normalized) n_sentences
+ +       0.0759
+
+Number of kernel evaluations: 3018044 (63.42% cached)
+
+
+
+Time taken to build model: 1.74 seconds
+Time taken to test model on training data: 0.11 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6285               63.4848 %
+Incorrectly Classified Instances      3615               36.5152 %
+Kappa statistic                          0.2697
+Mean absolute error                      0.3652
+Root mean squared error                  0.6043
+Relative absolute error                 73.0303 %
+Root relative squared error            120.8555 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2743 2207 |    a = 0
+ 1408 3542 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         672               61.0909 %
+Incorrectly Classified Instances       428               38.9091 %
+Kappa statistic                          0.2218
+Mean absolute error                      0.3891
+Root mean squared error                  0.6238
+Relative absolute error                 77.8182 %
+Root relative squared error            124.7543 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 284 266 |   a = 0
+ 162 388 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv3_train.arff -T 3.4_cv3_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.5632 * (normalized) first_person_pronouns
+ +       1.7493 * (normalized) second_person_pronouns
+ +      -0.4625 * (normalized) third_person_pronouns
+ +       0.443  * (normalized) coordinating_conjunctions
+ +      -2.1078 * (normalized) past_tense_verbs
+ +       0.363  * (normalized) future_tense_verbs
+ +       2.2379 * (normalized) commas
+ +      -0.1774 * (normalized) colons_and_semicolons
+ +       1.2754 * (normalized) dashes
+ +       1.1879 * (normalized) parentheses
+ +      -3.1721 * (normalized) ellipses
+ +       1.7485 * (normalized) common_nouns
+ +       0.9781 * (normalized) proper_nouns
+ +      -2.4382 * (normalized) adverbs
+ +      -0.2251 * (normalized) wh_words
+ +      -2.0112 * (normalized) all_upper_case_words
+ +       0.1342 * (normalized) avg_sentence_len
+ +       5.7161 * (normalized) avg_token_len
+ +       0.5353 * (normalized) n_sentences
+ +       0.0783
+
+Number of kernel evaluations: 2902314 (62.544% cached)
+
+
+
+Time taken to build model: 2.45 seconds
+Time taken to test model on training data: 0.16 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6322               63.8586 %
+Incorrectly Classified Instances      3578               36.1414 %
+Kappa statistic                          0.2772
+Mean absolute error                      0.3614
+Root mean squared error                  0.6012
+Relative absolute error                 72.2828 %
+Root relative squared error            120.2355 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2784 2166 |    a = 0
+ 1412 3538 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         670               60.9091 %
+Incorrectly Classified Instances       430               39.0909 %
+Kappa statistic                          0.2182
+Mean absolute error                      0.3909
+Root mean squared error                  0.6252
+Relative absolute error                 78.1818 %
+Root relative squared error            125.0454 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 289 261 |   a = 0
+ 169 381 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv4_train.arff -T 3.4_cv4_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.0323 * (normalized) first_person_pronouns
+ +       1.571  * (normalized) second_person_pronouns
+ +      -0.5083 * (normalized) third_person_pronouns
+ +       0.4858 * (normalized) coordinating_conjunctions
+ +      -1.9103 * (normalized) past_tense_verbs
+ +       0.3745 * (normalized) future_tense_verbs
+ +       1.9435 * (normalized) commas
+ +      -0.1505 * (normalized) colons_and_semicolons
+ +       1.6263 * (normalized) dashes
+ +       1.0504 * (normalized) parentheses
+ +      -3.0586 * (normalized) ellipses
+ +       1.59   * (normalized) common_nouns
+ +       1.04   * (normalized) proper_nouns
+ +      -2.3404 * (normalized) adverbs
+ +      -0.2064 * (normalized) wh_words
+ +      -1.9532 * (normalized) all_upper_case_words
+ +       0.309  * (normalized) avg_sentence_len
+ +       6.1154 * (normalized) avg_token_len
+ +       0.7247 * (normalized) n_sentences
+ +       0.0182
+
+Number of kernel evaluations: 2829628 (62.917% cached)
+
+
+
+Time taken to build model: 2.25 seconds
+Time taken to test model on training data: 0.23 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6271               63.3434 %
+Incorrectly Classified Instances      3629               36.6566 %
+Kappa statistic                          0.2669
+Mean absolute error                      0.3666
+Root mean squared error                  0.6054
+Relative absolute error                 73.3131 %
+Root relative squared error            121.0893 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2756 2194 |    a = 0
+ 1435 3515 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         723               65.7273 %
+Incorrectly Classified Instances       377               34.2727 %
+Kappa statistic                          0.3145
+Mean absolute error                      0.3427
+Root mean squared error                  0.5854
+Relative absolute error                 68.5455 %
+Root relative squared error            117.0858 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 327 223 |   a = 0
+ 154 396 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv5_train.arff -T 3.4_cv5_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.3521 * (normalized) first_person_pronouns
+ +       1.6431 * (normalized) second_person_pronouns
+ +      -0.2723 * (normalized) third_person_pronouns
+ +       0.4364 * (normalized) coordinating_conjunctions
+ +      -2.1236 * (normalized) past_tense_verbs
+ +       0.4602 * (normalized) future_tense_verbs
+ +       2.3977 * (normalized) commas
+ +      -0.506  * (normalized) colons_and_semicolons
+ +       1.4201 * (normalized) dashes
+ +       1.3568 * (normalized) parentheses
+ +      -3.1246 * (normalized) ellipses
+ +       1.6444 * (normalized) common_nouns
+ +       1.0265 * (normalized) proper_nouns
+ +      -2.3864 * (normalized) adverbs
+ +      -0.2675 * (normalized) wh_words
+ +      -1.9337 * (normalized) all_upper_case_words
+ +       0.3685 * (normalized) avg_sentence_len
+ +       6.0494 * (normalized) avg_token_len
+ +       0.8127 * (normalized) n_sentences
+ -       0.1708
+
+Number of kernel evaluations: 2785741 (63.371% cached)
+
+
+
+Time taken to build model: 2.14 seconds
+Time taken to test model on training data: 0.17 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6332               63.9596 %
+Incorrectly Classified Instances      3568               36.0404 %
+Kappa statistic                          0.2792
+Mean absolute error                      0.3604
+Root mean squared error                  0.6003
+Relative absolute error                 72.0808 %
+Root relative squared error            120.0673 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2824 2126 |    a = 0
+ 1442 3508 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         696               63.2727 %
+Incorrectly Classified Instances       404               36.7273 %
+Kappa statistic                          0.2655
+Mean absolute error                      0.3673
+Root mean squared error                  0.606 
+Relative absolute error                 73.4545 %
+Root relative squared error            121.2061 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 313 237 |   a = 0
+ 167 383 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv6_train.arff -T 3.4_cv6_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.5827 * (normalized) first_person_pronouns
+ +       1.7393 * (normalized) second_person_pronouns
+ +      -0.4498 * (normalized) third_person_pronouns
+ +       0.4132 * (normalized) coordinating_conjunctions
+ +      -2.0139 * (normalized) past_tense_verbs
+ +       0.6681 * (normalized) future_tense_verbs
+ +       2.3235 * (normalized) commas
+ +      -0.36   * (normalized) colons_and_semicolons
+ +       1.4542 * (normalized) dashes
+ +       1.1639 * (normalized) parentheses
+ +      -2.2675 * (normalized) ellipses
+ +       1.5436 * (normalized) common_nouns
+ +       0.9411 * (normalized) proper_nouns
+ +      -2.037  * (normalized) adverbs
+ +      -0.2081 * (normalized) wh_words
+ +      -1.911  * (normalized) all_upper_case_words
+ +       0.2232 * (normalized) avg_sentence_len
+ +       6.206  * (normalized) avg_token_len
+ +       0.6688 * (normalized) n_sentences
+ +       0.0384
+
+Number of kernel evaluations: 3128879 (62.667% cached)
+
+
+
+Time taken to build model: 2.41 seconds
+Time taken to test model on training data: 0.13 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6321               63.8485 %
+Incorrectly Classified Instances      3579               36.1515 %
+Kappa statistic                          0.277 
+Mean absolute error                      0.3615
+Root mean squared error                  0.6013
+Relative absolute error                 72.303  %
+Root relative squared error            120.2523 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2786 2164 |    a = 0
+ 1415 3535 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         666               60.5455 %
+Incorrectly Classified Instances       434               39.4545 %
+Kappa statistic                          0.2109
+Mean absolute error                      0.3945
+Root mean squared error                  0.6281
+Relative absolute error                 78.9091 %
+Root relative squared error            125.6257 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 265 285 |   a = 0
+ 149 401 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv7_train.arff -T 3.4_cv7_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.7636 * (normalized) first_person_pronouns
+ +       1.5203 * (normalized) second_person_pronouns
+ +      -0.5316 * (normalized) third_person_pronouns
+ +       0.4103 * (normalized) coordinating_conjunctions
+ +      -1.875  * (normalized) past_tense_verbs
+ +       0.4306 * (normalized) future_tense_verbs
+ +       2.063  * (normalized) commas
+ +      -0.3633 * (normalized) colons_and_semicolons
+ +       1.6514 * (normalized) dashes
+ +       1.1795 * (normalized) parentheses
+ +      -2.9133 * (normalized) ellipses
+ +       1.797  * (normalized) common_nouns
+ +       0.9713 * (normalized) proper_nouns
+ +      -2.0428 * (normalized) adverbs
+ +      -0.2244 * (normalized) wh_words
+ +      -1.9512 * (normalized) all_upper_case_words
+ +       0.1604 * (normalized) avg_sentence_len
+ +       5.9973 * (normalized) avg_token_len
+ +       0.6562 * (normalized) n_sentences
+ +       0.0146
+
+Number of kernel evaluations: 2870783 (62.711% cached)
+
+
+
+Time taken to build model: 1.69 seconds
+Time taken to test model on training data: 0.13 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6285               63.4848 %
+Incorrectly Classified Instances      3615               36.5152 %
+Kappa statistic                          0.2697
+Mean absolute error                      0.3652
+Root mean squared error                  0.6043
+Relative absolute error                 73.0303 %
+Root relative squared error            120.8555 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2756 2194 |    a = 0
+ 1421 3529 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         704               64      %
+Incorrectly Classified Instances       396               36      %
+Kappa statistic                          0.28  
+Mean absolute error                      0.36  
+Root mean squared error                  0.6   
+Relative absolute error                 72      %
+Root relative squared error            120      %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 321 229 |   a = 0
+ 167 383 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv8_train.arff -T 3.4_cv8_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.6683 * (normalized) first_person_pronouns
+ +       1.2867 * (normalized) second_person_pronouns
+ +      -0.3515 * (normalized) third_person_pronouns
+ +       0.4051 * (normalized) coordinating_conjunctions
+ +      -1.7315 * (normalized) past_tense_verbs
+ +       0.6703 * (normalized) future_tense_verbs
+ +       2.5136 * (normalized) commas
+ +      -0.3936 * (normalized) colons_and_semicolons
+ +       1.8611 * (normalized) dashes
+ +       1.2444 * (normalized) parentheses
+ +      -3.1362 * (normalized) ellipses
+ +       1.5957 * (normalized) common_nouns
+ +       0.9752 * (normalized) proper_nouns
+ +      -2.1548 * (normalized) adverbs
+ +      -0.2417 * (normalized) wh_words
+ +      -2.1355 * (normalized) all_upper_case_words
+ +       0.0121 * (normalized) avg_sentence_len
+ +       5.7894 * (normalized) avg_token_len
+ +       0.4954 * (normalized) n_sentences
+ +       0.0679
+
+Number of kernel evaluations: 2856687 (63.873% cached)
+
+
+
+Time taken to build model: 1.67 seconds
+Time taken to test model on training data: 0.11 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6258               63.2121 %
+Incorrectly Classified Instances      3642               36.7879 %
+Kappa statistic                          0.2642
+Mean absolute error                      0.3679
+Root mean squared error                  0.6065
+Relative absolute error                 73.5758 %
+Root relative squared error            121.306  %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2735 2215 |    a = 0
+ 1427 3523 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         714               64.9091 %
+Incorrectly Classified Instances       386               35.0909 %
+Kappa statistic                          0.2982
+Mean absolute error                      0.3509
+Root mean squared error                  0.5924
+Relative absolute error                 70.1818 %
+Root relative squared error            118.4752 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 321 229 |   a = 0
+ 157 393 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv9_train.arff -T 3.4_cv9_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.7337 * (normalized) first_person_pronouns
+ +       1.5786 * (normalized) second_person_pronouns
+ +      -0.5215 * (normalized) third_person_pronouns
+ +       0.292  * (normalized) coordinating_conjunctions
+ +      -1.8909 * (normalized) past_tense_verbs
+ +       0.5503 * (normalized) future_tense_verbs
+ +       2.2309 * (normalized) commas
+ +      -0.3661 * (normalized) colons_and_semicolons
+ +       2.0012 * (normalized) dashes
+ +       1.2381 * (normalized) parentheses
+ +      -3.4817 * (normalized) ellipses
+ +       1.7618 * (normalized) common_nouns
+ +       1.0777 * (normalized) proper_nouns
+ +      -1.9968 * (normalized) adverbs
+ +      -0.2744 * (normalized) wh_words
+ +      -2.0843 * (normalized) all_upper_case_words
+ +       0.1674 * (normalized) avg_sentence_len
+ +       6.163  * (normalized) avg_token_len
+ +       0.5507 * (normalized) n_sentences
+ +       0.0182
+
+Number of kernel evaluations: 3032743 (62.135% cached)
+
+
+
+Time taken to build model: 1.85 seconds
+Time taken to test model on training data: 0.16 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6323               63.8687 %
+Incorrectly Classified Instances      3577               36.1313 %
+Kappa statistic                          0.2774
+Mean absolute error                      0.3613
+Root mean squared error                  0.6011
+Relative absolute error                 72.2626 %
+Root relative squared error            120.2187 %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2773 2177 |    a = 0
+ 1400 3550 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         675               61.3636 %
+Incorrectly Classified Instances       425               38.6364 %
+Kappa statistic                          0.2273
+Mean absolute error                      0.3864
+Root mean squared error                  0.6216
+Relative absolute error                 77.2727 %
+Root relative squared error            124.3163 %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 302 248 |   a = 0
+ 177 373 |   b = 4
+java -cp weka/weka.jar weka.classifiers.bayes.NaiveBayes -t 3.4_cv10_train.arff -T 3.4_cv10_validate.arff
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 4
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.6217 * (normalized) first_person_pronouns
+ +       1.6275 * (normalized) second_person_pronouns
+ +      -0.5787 * (normalized) third_person_pronouns
+ +       0.5362 * (normalized) coordinating_conjunctions
+ +      -1.8085 * (normalized) past_tense_verbs
+ +       0.6797 * (normalized) future_tense_verbs
+ +       2.4492 * (normalized) commas
+ +      -0.0786 * (normalized) colons_and_semicolons
+ +       1.9029 * (normalized) dashes
+ +       1.423  * (normalized) parentheses
+ +      -3.2478 * (normalized) ellipses
+ +       1.5214 * (normalized) common_nouns
+ +       1.221  * (normalized) proper_nouns
+ +      -2.2374 * (normalized) adverbs
+ +      -0.159  * (normalized) wh_words
+ +      -2.134  * (normalized) all_upper_case_words
+ +       0.2239 * (normalized) avg_sentence_len
+ +       6.0936 * (normalized) avg_token_len
+ +       0.6965 * (normalized) n_sentences
+ +       0.0029
+
+Number of kernel evaluations: 2670287 (64.635% cached)
+
+
+
+Time taken to build model: 1.87 seconds
+Time taken to test model on training data: 0.12 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances        6294               63.5758 %
+Incorrectly Classified Instances      3606               36.4242 %
+Kappa statistic                          0.2715
+Mean absolute error                      0.3642
+Root mean squared error                  0.6035
+Relative absolute error                 72.8485 %
+Root relative squared error            120.705  %
+Total Number of Instances             9900     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2770 2180 |    a = 0
+ 1426 3524 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         695               63.1818 %
+Incorrectly Classified Instances       405               36.8182 %
+Kappa statistic                          0.2636
+Mean absolute error                      0.3682
+Root mean squared error                  0.6068
+Relative absolute error                 73.6364 %
+Root relative squared error            121.356  %
+Total Number of Instances             1100     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 318 232 |   a = 0
+ 173 377 |   b = 4

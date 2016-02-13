@@ -15,14 +15,33 @@ Average: 0.5870
 The 10-fold cross validation recall for the Naive Bayes classifier is summarized below:
 Class a = 0:
 [0.498, 0.478, 0.434, 0.487, 0.551, 0.438, 0.516, 0.536, 0.449, 0.478]
-Average: 0.xxxx
+Average: 0.4865
 Class b = 4:
 [0.753, 0.716, 0.722, 0.743, 0.698, 0.755, 0.729, 0.749, 0.702, 0.711]
-Average: 0.xxxx
+Average: 0.7278
 
 
 
-The original confusion matrix from each of the cross validation is attached below:
+The 10-fold cross validation accuracy for SVM and decision trees are summarized below:
+SVM: 
+[0.655, 0.611, 0.609, 0.657, 0.633, 0.605, 0.640, 0.649, 0.614, 0.632]
+Average: 0.6305
+Decision tree: 
+[0.591, 0.702, 0.584, 0.624, 0.598, 0.589, 0.578, 0.615, 0.578, 0.611]
+Average: 0.6070
+
+p-value between the three pairs of calssifiers:
+Naive Bayes and SVM: 0.0005
+Decision Tree and SVM: 0.1194
+Naive Bayes and Decision Tree: 0.9884
+As it can be seen from the classification result, Naive Bayes and Decision Tree have the strongest correlation.
+
+
+
+
+
+
+The original confusion matrix from each of the cross validation result for Naive Bayes classifier is attached below:
 
    a   b   <-- classified as
  274 276 |   a = 0
@@ -43,7 +62,6 @@ The original confusion matrix from each of the cross validation is attached belo
     a   b   <-- classified as
  303 247 |   a = 0
  166 384 |   b = 4
-
 
     a   b   <-- classified as
  241 309 |   a = 0
