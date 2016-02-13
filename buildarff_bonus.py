@@ -60,6 +60,8 @@ class Statistics:
     """
     Generates statistics of tweets
     """
+    NEG_WORD_LIST = "negative_words.txt"
+    POS_WORD_LIST = "positive_words.txt"
     TOKEN_REGEX = '^(.+)/([^/]+)$'
     STATS = [
         "first_person_pronouns",
@@ -79,6 +81,8 @@ class Statistics:
         "wh_words",
         "modern_slang_acroynms",
         "all_upper_case_words",
+        "negative_words",
+        "positive_words",
     ]
 
     def new_stats(self):
@@ -107,6 +111,8 @@ class Statistics:
              "n_chars": 0,
              "n_tokens_excluding_punc": 0,
              #number of sentences = n_sentence
+             "negative_words": 0,
+             "positive_words": 0,
         }
 
     def __init__(self, output_file):
@@ -189,6 +195,8 @@ class Statistics:
             "@ATTRIBUTE wh_words  NUMERIC\n" \
             "@ATTRIBUTE modern_slang_acroynms  NUMERIC\n" \
             "@ATTRIBUTE all_upper_case_words  NUMERIC\n" \
+            "@ATTRIBUTE negative_words NUMERIC\n" \
+            "@ATTRIBUTE positive_words NUMERIC\n" \
             "@ATTRIBUTE avg_sentence_len NUMERIC\n" \
             "@ATTRIBUTE avg_token_len NUMERIC\n" \
             "@ATTRIBUTE n_sentences NUMERIC\n" \
@@ -245,6 +253,12 @@ class Statistics:
         # past tense verbs
         elif tag == "VBD":
             self.stats["past_tense_verbs"] += 1
+        # negative words
+        elif word.lower() in self.negative_words:
+            self.stats["negative_words"] += 1
+        # negative words
+        elif word.lower() in self.positive_words:
+            self.stats["positive_words"] += 1
 
         # punctuation stats:
         self.stats["commas"] += word.count(",")
@@ -315,6 +329,17 @@ class Statistics:
         self.list_wh_words_tag = ["WDT", "WP", "WP$", "WRB"]
         self.list_punctuations = "?!,;:-.\"'"
         self.coordinating_conjunctions = ['for', 'and', 'nor', 'but', 'or', 'yet', 'so']
+        self.negative_words = set()
+        with open(Statistics.NEG_WORD_LIST, 'r') as neg:
+            for line in neg:
+                if not line.startswith(";"):
+                    self.negative_words.add(line.strip())
+
+        self.positive_words = set()
+        with open(Statistics.POS_WORD_LIST, 'r') as pos:
+            for line in pos:
+                if not line.startswith(";"):
+                    self.positive_words.add(line.strip())
 
     def clear_stats(self):
         self.stats = self.new_stats()
