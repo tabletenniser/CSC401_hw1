@@ -3,10 +3,10 @@ We explored the following methods to futher improve test classification rate on 
 1- Additional Features
     1.1- Positive and negative words
         We obtained a list of words tagged as having positive feelings and another tagged for negative feelings,
-        the statistics of the occurence in each tweet is added to the features extracted. The resulting test 
+        the statistics of the occurence in each tweet is added to the features extracted. The resulting test
         classification rate is:
-        NaiveBayes: 64%
-        SVM (SMO):  65%
-        J48 (tree): 56%
+        NaiveBayes: 66.3% (67.2% on training set)
+        SVM (SMO):  68.8% (69.3% on training set)
+        J48 (tree): 67.7% (82.3% on training set)
 
 2- Regularization
