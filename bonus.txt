@@ -9,4 +9,30 @@ We explored the following methods to futher improve test classification rate on 
         SVM (SMO):  68.8% (69.3% on training set)
         J48 (tree): 67.7% (82.3% on training set)
 
+        We further verify that the new features included indeed are the sources of improvement for our classification rate
+        by checking their information gain, result below:
+            Ranked attributes:
+            0.074955   18 negative_words
+            0.037936    1 first_person_pronouns
+            0.033216   19 positive_words
+            0.022771   21 avg_token_len
+            0.015309   14 adverbs
+            0.008796    5 past_tense_verbs
+            0.004424    2 second_person_pronouns
+            0.004387   11 ellipses
+            0.004062    9 dashes
+            0.003626   13 proper_nouns
+            0.003224   12 common_nouns
+            0.002494    3 third_person_pronouns
+            0.002358    7 commas
+            0.002009   20 avg_sentence_len
+            0.0009     10 parentheses
+            0.000694   15 wh_words
+            0           4 coordinating_conjunctions
+            0          22 n_sentences
+            0          16 modern_slang_acroynms
+            0           8 colons_and_semicolons
+            0          17 all_upper_case_words
+            0           6 future_tense_verbs
+
 2- Regularization
