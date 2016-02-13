@@ -1,6 +1,7 @@
 import sys
 import re
 import logging
+import argparse
 
 class Arff:
     TAG_REGEX = "^<A=(\d)>$"
@@ -319,6 +320,12 @@ class Statistics:
         self.stats = self.new_stats()
 
 if __name__ == "__main__":
-    argv = sys.argv[1:]
-    arff = Arff(*argv)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", type=str, help='Input .twtt file')
+    parser.add_argument("output_file", type=str, help='Output .arff file')
+    parser.add_argument("max_tweet", nargs='?', type=str, default=0, help='Max number of tweets')
+    args = parser.parse_args()
+
+    # argv = sys.argv[1:]
+    arff = Arff(args.input_file, args.output_file, args.max_tweet)
     arff.gen_arff()

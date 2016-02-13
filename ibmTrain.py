@@ -14,6 +14,7 @@
 import re
 import os
 import codecs
+import requests
 
 ###HELPER FUNCTIONS##########################
 
@@ -130,15 +131,19 @@ def create_classifier(username, password, n, input_file_prefix='ibmTrain'):
         input_file = input_file_prefix+str(n)+'.csv'
         if not os.path.exists(input_file):
             raise Exception("File "+input_file+" does not exist!")
+
         try:
-            cmd = 'curl -X POST -u %s:%s -F training_data=@%s -F training_metadata="{\\"language\\":\\"en\\",\\"name\\":\\"Classifier %d\\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password, input_file, n)
-            print cmd
-            os.system(cmd)
+            url = 'https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers'
+            payload = {'training_data': open(input_file, 'rb'), 'training_metadata': '{"language":"en", "name":"Classifier %d"}'%(n)}
+            r = requests.post(url, auth=(username, password), files=payload)
+            print r.content
+            if r.status_code != 200:
+                raise Exception('ERROR: Response code is NOT 200')
 
         except Exception as e:
-            raise e
+            raise Exception('Unable to POST to Watson with error: %s'%(e))
 	
-	return
+	return r.content
 	
 if __name__ == "__main__":
 	
@@ -149,7 +154,6 @@ if __name__ == "__main__":
 	output_csv_name = 'training_11000_watson_style.csv'
 	
 	convert_training_csv_to_watson_csv_format(input_csv_name, 55, output_csv_name)
-	
 	
 	### STEP 2: Save 3 subsets in the new format into ibmTrain#.csv files
 	# you should make use of the following function call:

@@ -37,15 +37,9 @@ def get_classifier_ids(username,password):
             r = requests.get(url, auth=(username, password))
             if r.status_code == 200:
                 classifiers_as_json = r.json()
-            # print 'status_code', r.status_code
-            # print 'content-type', r.headers['content-type']
-            # print classifiers_as_json['classifiers']
             list_of_classifier_ids = []
             for cls in classifiers_as_json['classifiers']:
-                # print cls['classifier_id']
                 list_of_classifier_ids.append(cls['classifier_id'])
-                # cmd = 'curl -u %s:%s "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"'%(username, password)
-                # os.system(cmd)
         except Exception:
             print "Error sending POST request."
             raise
@@ -77,7 +71,7 @@ def assert_all_classifiers_are_available(username, password, classifier_id_list)
                     raise Exception('Status code from REQUEST is not 200!!!')
                 classifiers_as_json = r.json()
                 if classifiers_as_json['status'] != 'Available':
-                    raise Exception('Job is not available!')
+                    raise Exception('Job is not available! Classifier status: '+classifiers_as_json['status'])
         except Exception:
             print "Error sending POST request."
             raise
@@ -307,23 +301,23 @@ if __name__ == "__main__":
 	#STEP 1: Ensure all 11 classifiers are ready for testing
 	username = '2c26f0a8-b83b-448c-8b44-daa6e799f8a3'
 	password = 'WKW85r9ZVwuf'
-        # classifier_ids = get_classifier_ids(username, password)
+        classifier_ids = get_classifier_ids(username, password)
         # print "classifier_ids", classifier_ids
-        # assert_all_classifiers_are_available(username, password, classifier_ids)
+        assert_all_classifiers_are_available(username, password, classifier_ids)
 
 	#STEP 2: Test the test data on all classifiers
-        # classifier_predictions = classify_all_texts(username, password, input_test_data)
+        classifier_predictions = classify_all_texts(username, password, input_test_data)
 
-        import pickle
+        # import pickle
         # with open('filename.pickle', 'wb') as handle:
         #     pickle.dump(classifier_predictions, handle)
-        with open('filename.pickle', 'rb') as handle:
-            classifier_predictions = pickle.load(handle)
-        print classifier_predictions.keys()
-        print 'len(classifier_predictions)', len(classifier_predictions)
-        print 'len(classifier_predictions[0])', len(classifier_predictions['c7fa4ax22-nlc-337'])
-        print 'len(classifier_predictions[1])', len(classifier_predictions['c7fa49x23-nlc-323'])
-        print 'len(classifier_predictions[2])', len(classifier_predictions['c7e487x21-nlc-384'])
+        # with open('filename.pickle', 'rb') as handle:
+        #     classifier_predictions = pickle.load(handle)
+        # print classifier_predictions.keys()
+        # print 'len(classifier_predictions)', len(classifier_predictions)
+        # print 'len(classifier_predictions[0])', len(classifier_predictions['c7fa4ax22-nlc-337'])
+        # print 'len(classifier_predictions[1])', len(classifier_predictions['c7fa49x23-nlc-323'])
+        # print 'len(classifier_predictions[2])', len(classifier_predictions['c7e487x21-nlc-384'])
 
 	#STEP 3: Compute the accuracy for each classifier
         for cls_name in classifier_predictions:
