@@ -1,0 +1,75 @@
+We explored the following methods to futher improve test classification rate on WEKA
+
+1- Additional Features
+    We obtained a list of words tagged as having positive feelings and another tagged for negative feelings,
+    the statistics of the occurence in each tweet is added to the features extracted. The resulting test
+    classification rate is:
+    NaiveBayes: 66.3% (67.2% on training set)
+    SVM (SMO):  68.8% (69.3% on training set)
+    J48 (tree): 67.7% (82.3% on training set)
+
+    We further verify that the new features included indeed are the sources of improvement for our classification rate
+    by checking their information gain, result below:
+        Ranked attributes:
+        0.074955   18 negative_words
+        0.037936    1 first_person_pronouns
+        0.033216   19 positive_words
+        0.022771   21 avg_token_len
+        0.015309   14 adverbs
+        0.008796    5 past_tense_verbs
+        0.004424    2 second_person_pronouns
+        0.004387   11 ellipses
+        0.004062    9 dashes
+        0.003626   13 proper_nouns
+        0.003224   12 common_nouns
+        0.002494    3 third_person_pronouns
+        0.002358    7 commas
+        0.002009   20 avg_sentence_len
+        0.0009     10 parentheses
+        0.000694   15 wh_words
+        0           4 coordinating_conjunctions
+        0          22 n_sentences
+        0          16 modern_slang_acroynms
+        0           8 colons_and_semicolons
+        0          17 all_upper_case_words
+        0           6 future_tense_verbs
+
+2- Try out different classifiers
+In order to select the best classifier for our problem, we used WEKA GUI to run 10-fold cross validation and select the best classifier based on the cross validation result. After trying a whole set of combinations of different classifiers, it seems that Dagging (voted average of a classifier trained on different subsets of the training set) on J48 decision tree has the best cross validation of 68.9% and it achieves a classification rate of test set of 69.6%. This result can be reproduced by the command "java -cp weka/weka.jar weka.classifiers.meta.Dagging -F 10 -S 1 -W weka.classifiers.trees.J48 -t train_gid55_bonus.arff -T test_bonus.arff. Below is the output from this command:
+
+=== Error on training data ===
+
+Correctly Classified Instances        7869               71.5364 %
+Incorrectly Classified Instances      3131               28.4636 %
+Kappa statistic                          0.4307
+Mean absolute error                      0.3817
+Root mean squared error                  0.4324
+Relative absolute error                 76.3325 %
+Root relative squared error             86.4733 %
+Total Number of Instances            11000
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3850 1650 |    a = 0
+ 1481 4019 |    b = 4
+
+
+=== Error on test data ===
+
+Correctly Classified Instances         250               69.6379 %
+Incorrectly Classified Instances       109               30.3621 %
+Kappa statistic                          0.3916
+Mean absolute error                      0.3842
+Root mean squared error                  0.4427
+Relative absolute error                 76.8438 %
+Root relative squared error             88.5438 %
+Total Number of Instances              359
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 111  66 |   a = 0
+  43 139 |   b = 4

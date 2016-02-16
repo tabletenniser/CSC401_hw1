@@ -1,0 +1,19 @@
+Q3:
+The classification accuracy using IBM Watson on BlueMix is summarized below:
+u'c7fa4ax22-nlc-337' (Classifier 500): 0.7103
+u'c7fa49x23-nlc-323' (Classifier 2500): 0.7577
+u'c7e487x21-nlc-384' (Classifier 5000): 0.7326
+
+As it can be seen, IBM Waston's deep neural net performs a lot better job than the classification method using the chosen features as stated in the assignment, it is able to achieve ~75% of classification rate as opposed to our ~55%, which is a huge improvement for a binary classifier like this. It is also observed that for classifier size = 500, it is under-performed (71%) comparing to the other two with larger training set. However, different from section 3.2, the classification performance actually drops when we increase the training dataset size from 2500 to 5000. It should also be noted that this performance drop when we increase the training dataset size may be considered as an outlier since we only gathered three data points here.
+
+
+Q4:
+The average confidence level for classifiers with different training size is summarized below:
+u'c7fa4ax22-nlc-337' (Classifier 500): 
+	Correct labeling: 0.9295; In-correct labeling: 0.8555
+u'c7fa49x23-nlc-323' (Classifier 2500):
+	Correct labeling: 0.9344; In-correct labeling: 0.8523
+u'c7e487x21-nlc-384' (Classifier 5000):
+	Correct labeling: 0.9338; In-correct labeling: 0.8688
+
+As it can be seen that for all classifiers, the average confidence level among the corrected labeled data is higher than that of the in-corrected labeled data. Moreover, although the three classifiers have different performance, their average confidence level are actually very similar within each other (< 1.5%).

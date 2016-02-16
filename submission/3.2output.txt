@@ -1,0 +1,17 @@
+The test dataset classification accuracy vs. the size of the training set is summarized below (on Naive Bayes classifier):
+training size n=500: 50.9749 % (183/359)
+training size n=1000: 50.4178 % (181/359)
+training size n=1500: 50.6964 % (182/359)
+training size n=2000: 51.5320 % (185/359)
+training size n=2500: 51.8106 % (186/359)
+training size n=3000: 52.3677 % (188/359)
+training size n=3500: 52.9248 % (190/359)
+training size n=4000: 53.4819 % (192/359)
+training size n=4500: 53.4819 % (192/359)
+training size n=5000: 52.3677 % (188/359)
+training size n=5500: 54.039 % (194/359)
+
+Note: the size of the training set n is the size of class 0 training data which is the same as the size of class 4 training data. So, for n=500, we have 1000 training examples (500 for class 0 and 500 for class 4)
+
+
+As it can be seen, the classification accuracy generally goes up with the size of the training set. This is expected since more training data will enable our classifier to learn a better classification boundary between the two classes. However, it should also be noted that our classification rate for the binary classification problem is just barely above 50%, and our training dataset is pretty small (359 tweets). So, individual data point in the testing set may cause changes in the result (e.g the dent at n=5000).
