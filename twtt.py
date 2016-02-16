@@ -3,6 +3,7 @@ import logging
 import re
 import hashlib
 import NLPlib
+import argparse
 
 """
 TODO:
@@ -325,14 +326,24 @@ class TweetTokenizer:
         return texts
 
 if __name__ == "__main__":
-    argv = sys.argv[1:]
-    if (len(argv) == 3):
-        argv.append(False)
-        twt = TweetTokenizer(*argv)
-    else:
-        argv[-1] = True
-        twt = TweetTokenizer(*argv)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", type=str, help='Input as .csv file')
+    parser.add_argument("group_id", type=str, default='55', help='Group ID for training, default = 55')
+    parser.add_argument("output_file", type=str, help='Output as .arff file')
+    parser.add_argument("is_training", nargs='?', type=bool, default=True, help='Set to True if using entire dataset')
+    args = parser.parse_args()
+    
+    twt = TweetTokenizer(args.input_file, args.group_id, args.output_file, args.is_training)
     twt.parse_tweet()
+
+    # argv = sys.argv[1:]
+    # if (len(argv) == 3):
+    #     argv.append(False)
+    #     twt = TweetTokenizer(*argv)
+    # else:
+    #     argv[-1] = True
+    #     twt = TweetTokenizer(*argv)
+    # twt.parse_tweet()
 
     #twt = TweetTokenizer("training.1600000.processed.noemoticon.csv", 55, "train_gid55.twt", parse_all=False)
     #twt = TweetTokenizer("testdata.manualSUBSET.2009.06.14.csv", 55, "test.twt", parse_all=True)
